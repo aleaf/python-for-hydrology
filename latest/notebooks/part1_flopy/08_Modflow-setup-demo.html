@@ -141,7 +141,7 @@ resolution local grid refinement (LGR) inset (sub)model (see for example, Mehl a
 <li><p>Uniform, rectilinear grids are used for the parent and inset models, which greatly simplifies model construction, diagnostics, postprocessing and visualization</p></li>
 <li><p>With the parent and inset models tightly coupled at the matrix (inner iteration) level, little or no model solution efficiency is lost vs. an unstructured discretization approach.</p></li>
 </ul>
-<p><img alt="594cf2aff657481d91051697ecd83c2b" src="https://github.com/doi-usgs/modflow-setup/blob/develop/docs/source/_static/fig1_pleasant_lake_model.jpg?raw=true" /></p>
+<p><img alt="a233e03ba8d34caa88aa04698dd9d7e3" src="https://github.com/doi-usgs/modflow-setup/blob/develop/docs/source/_static/fig1_pleasant_lake_model.jpg?raw=true" /></p>
 <p><strong>Figure 1</strong>: The full Pleasant Lake model domain with location map, showing the relationship between the regional, parent and LGR inset models, as well as the irrigation wells considered.</p>
 <p>Most details of the Fienen et al (2022) model are included here, but to reduce file sizes and execution time, a smaller parent model domain is used, and the inset model spacing is increased to 40 meters. The example model here is for illustrative purposes only, and is not intended to be adequate for representing pumping impacts or providing a sufficient distance to the perimeter boundaries.</p>
 </section>
@@ -340,7 +340,7 @@ creating shapely Polygons of grid cells...
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-finished in 0.11s
+finished in 0.10s
 
 </pre></div></div>
 </div>
@@ -388,7 +388,7 @@ writing postproc/shps/plsnt-lgr-inset_grid.shp... Done
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Pleasant Lake test case version 0.1.post415+g30bca16
+Pleasant Lake test case version 0.1.post416+g21c7ede
 Parent model: /home/runner/work/python-for-hydrology/python-for-hydrology/docs/source/notebooks/part1_flopy/data/pleasant-lake//pleasant
 5 layer(s), 25 row(s), 27 column(s)
 delr: [200.00...200.00] undefined
@@ -484,7 +484,7 @@ defaultdict(dict,
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;plsnt-lgr-inset&#39;: plsnt-lgr-inset model version 0.post415+g30bca16
+{&#39;plsnt-lgr-inset&#39;: plsnt-lgr-inset model version 0.post416+g21c7ede
  Parent model: ./plsnt-lgr-parent
  5 layer(s), 75 row(s), 85 column(s)
  delr: [40.00...40.00] undefined
@@ -590,6 +590,10 @@ writing simulation...
     writing package rcha_0...
     writing package oc...
     writing package chd_0...
+INFORMATION: maxbound in (&#39;gwf6&#39;, &#39;chd&#39;, &#39;dimensions&#39;) changed to 272 based on size of stress_period_data
+    writing package obs_0...
+    writing package sfr_0...
+    writing package wel_0...
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -597,10 +601,6 @@ writing simulation...
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-INFORMATION: maxbound in (&#39;gwf6&#39;, &#39;chd&#39;, &#39;dimensions&#39;) changed to 272 based on size of stress_period_data
-    writing package obs_0...
-    writing package sfr_0...
-    writing package wel_0...
 INFORMATION: maxbound in (&#39;gwf6&#39;, &#39;wel&#39;, &#39;dimensions&#39;) changed to 2 based on size of stress_period_data
     writing package obs_1...
     writing package obs_2...
@@ -724,7 +724,7 @@ Resources Software User Rights Notice for complete use, copyright,
 and distribution information.
 
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2024/03/21 18:16:40
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2024/03/21 18:16:59
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
@@ -841,8 +841,8 @@ and distribution information.
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2024/03/21 18:16:45
- Elapsed run time:  5.027 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2024/03/21 18:17:04
+ Elapsed run time:  5.064 Seconds
 
 
 WARNING REPORT:
