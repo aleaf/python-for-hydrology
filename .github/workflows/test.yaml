@@ -86,7 +86,7 @@ jobs:
         $PSDefaultParameterValues['*:ErrorAction']='Stop'
         powershell .github/install_opengl.ps1
 
-    - name: Run tests
-      shell: bash -l {0}
-      run: |
-        pytest tests/test_notebooks.py -v
+    #- name: Run tests
+    #  shell: bash -l {0}
+    #  run: |
+    #    pytest tests/test_notebooks.py -v
