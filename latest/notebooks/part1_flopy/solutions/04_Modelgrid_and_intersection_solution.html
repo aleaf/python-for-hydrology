@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
@@ -5,25 +7,19 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>04: Modelgrid and intersection &mdash; Python for Hydrology 1.0a documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/nbsphinx-code-cells.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/nbsphinx-code-cells.css?v=2aa19091" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../../_static/documentation_options.js?v=feab032e"></script>
-        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-        <script src="../../../_static/copybutton.js?v=f281be69"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/documentation_options.js?v=feab032e"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -42,9 +38,6 @@
           <a href="../../../index.html" class="icon icon-home">
             Python for Hydrology
           </a>
-              <div class="version">
-                1.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -150,15 +143,15 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pathlib</span> <span class="k">as</span> <span class="nn">pl</span>
-<span class="kn">import</span> <span class="nn">flopy</span>
-<span class="kn">from</span> <span class="nn">flopy.utils.gridgen</span> <span class="kn">import</span> <span class="n">Gridgen</span>
-<span class="kn">from</span> <span class="nn">flopy.utils</span> <span class="kn">import</span> <span class="n">GridIntersect</span><span class="p">,</span> <span class="n">Raster</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pl</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">flopy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">flopy.utils.gridgen</span><span class="w"> </span><span class="kn">import</span> <span class="n">Gridgen</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">flopy.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">GridIntersect</span><span class="p">,</span> <span class="n">Raster</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
 
 <span class="c1"># pd.options.mode.chained_assignment = None</span>
 <span class="n">data_path</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../data/modelgrid_intersection&quot;</span><span class="p">)</span>
@@ -588,7 +581,7 @@ xll:7695794.20952; yll:4050416.79628; rotation:-15; units:undefined; lenuni:0
 </section>
 <section id="Vertex-model-grid">
 <h2>Vertex model grid<a class="headerlink" href="#Vertex-model-grid" title="Link to this heading">¶</a></h2>
-<p>The vertex model grid is produced for MODFLOW model discretizations that are defined by verticies (<code class="docutils literal notranslate"><span class="pre">DISV</span></code>). We can build a quadtree vertex grid from an exiting structured modelgrid using the gridgen utility and the <code class="docutils literal notranslate"><span class="pre">Gridgen</span></code> class.</p>
+<p>The vertex model grid is produced for MODFLOW model discretizations that are defined by vertices (<code class="docutils literal notranslate"><span class="pre">DISV</span></code>). We can build a quadtree vertex grid from an exiting structured modelgrid using the gridgen utility and the <code class="docutils literal notranslate"><span class="pre">Gridgen</span></code> class.</p>
 <p>First let’s unrotate the grid coordinates of our structured grid to make this easy</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
@@ -1124,7 +1117,7 @@ False
 </div>
 <p>Fantastic! The modelgrid has been created and it completely overlays the contributing area.</p>
 <p>FloPy has a utility named <code class="docutils literal notranslate"><span class="pre">GridIntersect</span></code> that allows the user to intersect points, polygons, and polylines with modelgrid objects.</p>
-<p>In this example, the basin boundary will be intersected with the modelgrid to create the active and inactive extents of the model. The <code class="docutils literal notranslate"><span class="pre">.intersect()</span></code> method returns a numpy recarry with cellids, verticies, cell areas, and shapely polygon objects.</p>
+<p>In this example, the basin boundary will be intersected with the modelgrid to create the active and inactive extents of the model. The <code class="docutils literal notranslate"><span class="pre">.intersect()</span></code> method returns a numpy recarry with cellids, vertices, cell areas, and shapely polygon objects.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
@@ -1155,7 +1148,7 @@ array([(1, 52), (1, 53), (1, 54), ..., (73, 64), (73, 65), (73, 66)],
       dtype=object)
 </pre></div></div>
 </div>
-<p>create the ibound/idomain array (active and incative model cells)</p>
+<p>create the ibound/idomain array (active and inactive model cells)</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
@@ -1428,7 +1421,7 @@ model_name = sagehen
 <p><strong>Hints:</strong></p>
 <ul class="simple">
 <li><p>Rasters contain multiple datasets called bands, the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> class has a <code class="docutils literal notranslate"><span class="pre">.bands</span></code> attribute that returns a list of all of the bands within the raster. Lists can be looped over!</p></li>
-<li><p>Becasue the data is coarse compared to our model discretization, the nearest neighbor method should be appropriate for resampling <code class="docutils literal notranslate"><span class="pre">method=&quot;nearest&quot;</span></code></p></li>
+<li><p>Because the data is coarse compared to our model discretization, the nearest neighbor method should be appropriate for resampling <code class="docutils literal notranslate"><span class="pre">method=&quot;nearest&quot;</span></code></p></li>
 <li><p>Finally no data values should be converted to 0 value. The <code class="docutils literal notranslate"><span class="pre">Raster</span></code> class has a <code class="docutils literal notranslate"><span class="pre">.nodatavals</span></code> attribute that returns a list of no data values. There is only one in this list; use numpy’s boolean indexing or <code class="docutils literal notranslate"><span class="pre">np.where()</span></code> to replace all of the no data entries with 0.</p></li>
 </ul>
 <div class="nbinput nblast docutils container">
@@ -2323,7 +2316,7 @@ model_name = sagehen
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dataretrieval.nwis</span> <span class="k">as</span> <span class="nn">nwis</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">dataretrieval.nwis</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nwis</span>
 
 
 <span class="n">gage</span> <span class="o">=</span> <span class="n">nwis</span><span class="o">.</span><span class="n">get_record</span><span class="p">(</span><span class="n">sites</span><span class="o">=</span><span class="n">station_id</span><span class="p">,</span> <span class="n">service</span><span class="o">=</span><span class="s1">&#39;iv&#39;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2023-12-31&quot;</span><span class="p">,</span> <span class="n">parameterCd</span><span class="o">=</span><span class="s2">&quot;00065&quot;</span><span class="p">)</span>
@@ -2999,8 +2992,8 @@ and distribution information.
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022-2024, USGS Python for Hydrology instructors.
-      <span class="lastupdated">Last updated on Aug 07, 2024.
+    <p>&#169; Copyright 2022-2025, USGS Python for Hydrology instructors.
+      <span class="lastupdated">Last updated on Mar 17, 2025.
       </span></p>
   </div>
 
