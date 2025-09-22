@@ -14,6 +14,8 @@
       <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
 
   
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../_static/documentation_options.js?v=feab032e"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -64,7 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="solutions/08_pandas.html">08: Working with tabular data in Pandas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="09_a_Geopandas.html">09: GeoPandas - DataFrames with geometry for GIS applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="solutions/09_Geopandas__solutions.html">09: Geopandas exercise solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10_Rasterio.html">10: Using Rasterio and Numpy to examine ice loss on Mt. Rainier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10b_Rasterio_advanced.html">10b: Using Rasterio and Numpy to examine ice loss on Mt. Rainier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11_xarray_mt_rainier_precip.html">11: Using Xarray to look at Daymet precipitation around Mt. Rainier</a></li>
 </ul>
 </li>
@@ -107,7 +109,7 @@
            <div itemprop="articleBody">
              
   <section id="06a:-Using-Matplotlib-to-Create-Animation">
-<h1>06a: Using Matplotlib to Create Animation<a class="headerlink" href="#06a:-Using-Matplotlib-to-Create-Animation" title="Link to this heading">¶</a></h1>
+<h1>06a: Using Matplotlib to Create Animation<a class="headerlink" href="#06a:-Using-Matplotlib-to-Create-Animation" title="Link to this heading"></a></h1>
 <p>This notebooks shows how to create an animation that will run and play inside a notebook. The animation can also be written to a video file.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -361,42 +363,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_img4720c765ee424154a183e404bc9e1dbe">
+  <img id="_anim_imgc24d2bbfa6a749cab90e8ec609cb53db">
   <div class="anim-controls">
-    <input id="_anim_slider4720c765ee424154a183e404bc9e1dbe" type="range" class="anim-slider"
+    <input id="_anim_sliderc24d2bbfa6a749cab90e8ec609cb53db" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anim4720c765ee424154a183e404bc9e1dbe.set_frame(parseInt(this.value));">
+           oninput="animc24d2bbfa6a749cab90e8ec609cb53db.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim4720c765ee424154a183e404bc9e1dbe.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="animc24d2bbfa6a749cab90e8ec609cb53db.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anim4720c765ee424154a183e404bc9e1dbe.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="animc24d2bbfa6a749cab90e8ec609cb53db.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anim4720c765ee424154a183e404bc9e1dbe.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="animc24d2bbfa6a749cab90e8ec609cb53db.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anim4720c765ee424154a183e404bc9e1dbe.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="animc24d2bbfa6a749cab90e8ec609cb53db.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anim4720c765ee424154a183e404bc9e1dbe.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="animc24d2bbfa6a749cab90e8ec609cb53db.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anim4720c765ee424154a183e404bc9e1dbe.play_animation()">
+      <button title="Play" aria-label="Play" onclick="animc24d2bbfa6a749cab90e8ec609cb53db.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anim4720c765ee424154a183e404bc9e1dbe.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="animc24d2bbfa6a749cab90e8ec609cb53db.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anim4720c765ee424154a183e404bc9e1dbe.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="animc24d2bbfa6a749cab90e8ec609cb53db.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anim4720c765ee424154a183e404bc9e1dbe.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="animc24d2bbfa6a749cab90e8ec609cb53db.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select4720c765ee424154a183e404bc9e1dbe"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selectc24d2bbfa6a749cab90e8ec609cb53db"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_4720c765ee424154a183e404bc9e1dbe"
+      <input type="radio" name="state" value="once" id="_anim_radio1_c24d2bbfa6a749cab90e8ec609cb53db"
              >
-      <label for="_anim_radio1_4720c765ee424154a183e404bc9e1dbe">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_4720c765ee424154a183e404bc9e1dbe"
+      <label for="_anim_radio1_c24d2bbfa6a749cab90e8ec609cb53db">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_c24d2bbfa6a749cab90e8ec609cb53db"
              checked>
-      <label for="_anim_radio2_4720c765ee424154a183e404bc9e1dbe">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_4720c765ee424154a183e404bc9e1dbe"
+      <label for="_anim_radio2_c24d2bbfa6a749cab90e8ec609cb53db">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_c24d2bbfa6a749cab90e8ec609cb53db"
              >
-      <label for="_anim_radio3_4720c765ee424154a183e404bc9e1dbe">Reflect</label>
+      <label for="_anim_radio3_c24d2bbfa6a749cab90e8ec609cb53db">Reflect</label>
     </form>
   </div>
 </div>
@@ -406,9 +408,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_img4720c765ee424154a183e404bc9e1dbe";
-    var slider_id = "_anim_slider4720c765ee424154a183e404bc9e1dbe";
-    var loop_select_id = "_anim_loop_select4720c765ee424154a183e404bc9e1dbe";
+    var img_id = "_anim_imgc24d2bbfa6a749cab90e8ec609cb53db";
+    var slider_id = "_anim_sliderc24d2bbfa6a749cab90e8ec609cb53db";
+    var loop_select_id = "_anim_loop_selectc24d2bbfa6a749cab90e8ec609cb53db";
     var frames = new Array(50);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAYAAAA10dzkAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -19985,7 +19987,7 @@ FBEREQkwKgBFREREAowKQBEREZEA83/F+42WhAZ+9AAAAABJRU5ErkJggg==\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anim4720c765ee424154a183e404bc9e1dbe = new Animation(frames, img_id, slider_id, 200.0,
+        animc24d2bbfa6a749cab90e8ec609cb53db = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
