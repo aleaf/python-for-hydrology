@@ -840,7 +840,7 @@
     "for i, site in enumerate(sites):\n",
     "    df = ds.prcp.sel(x=x[0], \n",
     "                     y=y[0],\n",
-    "                     method='nearest').drop(['lat', 'lon', 'x', 'y']).to_dataframe()\n",
+    "                     method='nearest').drop_vars(['lat', 'lon', 'x', 'y']).to_dataframe()\n",
     "    df.columns = [site]\n",
     "    dfs.append(df)\n",
     "\n",
@@ -953,13 +953,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Note that this dataset already includes `lat`/`lon` coordinates. Because the x and y axes are in a projected coordinate reference system (Lambert Conformal Conic), the `lat`/`lon` coordinates are two dimensional (each point in the dataset has its own `lat`/`lon` coordinate). Earlier versions of **`rioxarray`** didn't like this for some reason-- as of version 0.15, it produced a `ValueError: IndexVariable objects must be 1-dimensional` when calling `rio.reproject()`. Droping the `lat`/`lon` coordinates before calling `.rio.project()` was a way to get around this. \n",
-    "\n",
-    "For example:\n",
-    "\n",
-    "```python\n",
-    "ds_4269 = ds['prcp'].drop_vars(['lat', 'lon']).rio.reproject(4269)\n",
-    "```"
+    "Note that this dataset already includes `lat`/`lon` coordinates. Because the x and y axes are in a projected coordinate reference system (Lambert Conformal Conic), the `lat`/`lon` coordinates are two dimensional (each point in the dataset has its own `lat`/`lon` coordinate). Earlier versions of **`rioxarray`** didn't like this for some reason-- as of version 0.15, it produced a `ValueError: IndexVariable objects must be 1-dimensional` when calling `rio.reproject()`. Droping the `lat`/`lon` coordinates before calling `.rio.project()` was a way to get around this. For example: ```ds_4269 = ds['prcp'].drop_vars(['lat', 'lon']).rio.reproject(4269)```"
    ]
   },
   {
@@ -1054,7 +1048,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "data = ds_4269.sel(time='2018')#.mean(axis=0)"
+    "data = ds_4269.sel(time='2018')"
    ]
   },
   {
