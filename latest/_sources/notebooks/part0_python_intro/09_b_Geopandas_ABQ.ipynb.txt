@@ -16,7 +16,7 @@
    "outputs": [],
    "source": [
     "import geopandas as gp\n",
-    "from pathlib import Path\n",
+    "import pathlib as pl\n",
     "import fiona\n",
     "fiona.drvsupport.supported_drivers['libkml'] = 'rw' # enable KML support which is disabled by default\n",
     "fiona.drvsupport.supported_drivers['LIBKML'] = 'rw' # enable KML support which is disabled by default\n"
@@ -39,7 +39,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "datapath = Path('./data/geopandas/abq/')"
+    "datapath = pl.Path('./data/geopandas/abq/')"
    ]
   },
   {
