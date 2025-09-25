@@ -4,7 +4,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Loading and visualizing groundwater models\n",
+    "# 03: Loading and visualizing groundwater models\n",
     "\n",
     "This exercise, we will load an existing model using Flopy, look at some of the inputs, run the model, and load and plot some of the results.\n",
     "\n",

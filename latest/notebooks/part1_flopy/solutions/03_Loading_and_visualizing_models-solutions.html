@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loading and visualizing groundwater models &mdash; Python for Hydrology 1.0a documentation</title>
+  <title>03: Loading and visualizing groundwater models &mdash; Python for Hydrology 1.0a documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
@@ -54,7 +54,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../../part1.html">Part 1: Flopy</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../01-Flopy-intro.html">01: Introduction to FloPy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02-Building-Post-Processing-MODFLOW6__solutions.html">02: Building and post-processing a MODFLOW 6 model</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Loading and visualizing groundwater models</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">03: Loading and visualizing groundwater models</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#The-Pleasant-Lake-example">The Pleasant Lake example</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Example-model-details:">Example model details:</a></li>
 </ul>
@@ -113,7 +113,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../part1.html">Part 1 flopy</a></li>
-      <li class="breadcrumb-item active">Loading and visualizing groundwater models</li>
+      <li class="breadcrumb-item active">03: Loading and visualizing groundwater models</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/notebooks/part1_flopy/solutions/03_Loading_and_visualizing_models-solutions.ipynb.txt" rel="nofollow"> View page source</a>
       </li>
@@ -123,8 +123,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="Loading-and-visualizing-groundwater-models">
-<h1>Loading and visualizing groundwater models<a class="headerlink" href="#Loading-and-visualizing-groundwater-models" title="Link to this heading"></a></h1>
+  <section id="03:-Loading-and-visualizing-groundwater-models">
+<h1>03: Loading and visualizing groundwater models<a class="headerlink" href="#03:-Loading-and-visualizing-groundwater-models" title="Link to this heading"></a></h1>
 <p>This exercise, we will load an existing model using Flopy, look at some of the inputs, run the model, and load and plot some of the results.</p>
 <section id="The-Pleasant-Lake-example">
 <h2>The Pleasant Lake example<a class="headerlink" href="#The-Pleasant-Lake-example" title="Link to this heading"></a></h2>
@@ -853,42 +853,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_img1dd22f5f4e524a9e8fedb78413ac43da">
+  <img id="_anim_img41b877fff6d94b4bb9edbfd813f2e9e8">
   <div class="anim-controls">
-    <input id="_anim_slider1dd22f5f4e524a9e8fedb78413ac43da" type="range" class="anim-slider"
+    <input id="_anim_slider41b877fff6d94b4bb9edbfd813f2e9e8" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anim1dd22f5f4e524a9e8fedb78413ac43da.set_frame(parseInt(this.value));">
+           oninput="anim41b877fff6d94b4bb9edbfd813f2e9e8.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim41b877fff6d94b4bb9edbfd813f2e9e8.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anim41b877fff6d94b4bb9edbfd813f2e9e8.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim41b877fff6d94b4bb9edbfd813f2e9e8.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim41b877fff6d94b4bb9edbfd813f2e9e8.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anim41b877fff6d94b4bb9edbfd813f2e9e8.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anim41b877fff6d94b4bb9edbfd813f2e9e8.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anim41b877fff6d94b4bb9edbfd813f2e9e8.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anim41b877fff6d94b4bb9edbfd813f2e9e8.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim41b877fff6d94b4bb9edbfd813f2e9e8.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select1dd22f5f4e524a9e8fedb78413ac43da"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select41b877fff6d94b4bb9edbfd813f2e9e8"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_1dd22f5f4e524a9e8fedb78413ac43da"
+      <input type="radio" name="state" value="once" id="_anim_radio1_41b877fff6d94b4bb9edbfd813f2e9e8"
              >
-      <label for="_anim_radio1_1dd22f5f4e524a9e8fedb78413ac43da">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_1dd22f5f4e524a9e8fedb78413ac43da"
+      <label for="_anim_radio1_41b877fff6d94b4bb9edbfd813f2e9e8">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_41b877fff6d94b4bb9edbfd813f2e9e8"
              checked>
-      <label for="_anim_radio2_1dd22f5f4e524a9e8fedb78413ac43da">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_1dd22f5f4e524a9e8fedb78413ac43da"
+      <label for="_anim_radio2_41b877fff6d94b4bb9edbfd813f2e9e8">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_41b877fff6d94b4bb9edbfd813f2e9e8"
              >
-      <label for="_anim_radio3_1dd22f5f4e524a9e8fedb78413ac43da">Reflect</label>
+      <label for="_anim_radio3_41b877fff6d94b4bb9edbfd813f2e9e8">Reflect</label>
     </form>
   </div>
 </div>
@@ -898,9 +898,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_img1dd22f5f4e524a9e8fedb78413ac43da";
-    var slider_id = "_anim_slider1dd22f5f4e524a9e8fedb78413ac43da";
-    var loop_select_id = "_anim_loop_select1dd22f5f4e524a9e8fedb78413ac43da";
+    var img_id = "_anim_img41b877fff6d94b4bb9edbfd813f2e9e8";
+    var slider_id = "_anim_slider41b877fff6d94b4bb9edbfd813f2e9e8";
+    var loop_select_id = "_anim_loop_select41b877fff6d94b4bb9edbfd813f2e9e8";
     var frames = new Array(64);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABXgAAAH0CAYAAACHNkWHAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -29575,7 +29575,7 @@ AAAAAElFTkSuQmCC\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anim1dd22f5f4e524a9e8fedb78413ac43da = new Animation(frames, img_id, slider_id, 200.0,
+        anim41b877fff6d94b4bb9edbfd813f2e9e8 = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -30092,7 +30092,7 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/09/25 19:56:18
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/09/25 20:44:49
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
@@ -30111,8 +30111,8 @@ and distribution information.
     Solving:  Stress period:    12    Time step:     1
     Solving:  Stress period:    13    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/09/25 19:56:21
- Elapsed run time:  2.416 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/09/25 20:44:51
+ Elapsed run time:  2.405 Seconds
 
 
 WARNING REPORT:
@@ -30152,7 +30152,7 @@ WARNING REPORT:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;flopy.utils.binaryfile.HeadFile at 0x7f7cf8e87350&gt;
+&lt;flopy.utils.binaryfile.HeadFile at 0x7f54bc28fc50&gt;
 </pre></div></div>
 </div>
 <p>The output file objects include various methods and attributes with information about the output. For example, the elapsed simulation times with output recrods.</p>
@@ -30789,7 +30789,7 @@ rec.array([(6560, 1, -163.5854572 ), (6566, 1,   85.47697217),
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.colorbar.Colorbar at 0x7f7cf833a810&gt;
+&lt;matplotlib.colorbar.Colorbar at 0x7f54b6cde210&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -31492,7 +31492,7 @@ Text(0, 0.5, &#39;Elevation, in Meters&#39;)
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/tmp/ipykernel_12582/614846193.py:1: FutureWarning: The &#39;delim_whitespace&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep=&#39;\s+&#39;`` instead
+/tmp/ipykernel_12613/614846193.py:1: FutureWarning: The &#39;delim_whitespace&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep=&#39;\s+&#39;`` instead
   pd.read_csv(sim_ws / &#39;external/chd_001.dat&#39;, delim_whitespace=True)
 </pre></div></div>
 </div>
