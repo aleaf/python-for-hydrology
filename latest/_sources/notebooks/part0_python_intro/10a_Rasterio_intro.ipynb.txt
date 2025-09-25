@@ -413,6 +413,16 @@
   },
   {
    "cell_type": "markdown",
+   "id": "25d8b2e0-90b4-4a4c-b7b6-7cfa0fb8d01b",
+   "metadata": {},
+   "source": [
+    "**Looks the same! But notice the new units on the colobar scale.**\n",
+    "\n",
+    "Now let's save this raster to a new file."
+   ]
+  },
+  {
+   "cell_type": "markdown",
    "id": "88c7f772-9219-4be0-bbe6-791cfbb6ea0f",
    "metadata": {},
    "source": [
@@ -448,16 +458,6 @@
     "im = ct.get_images()[0]\n",
     "cbar = fig.colorbar(im, ticks=[1, 2, 3], shrink=0.8)\n",
     "cbar.ax.set_yticklabels(['Low Elev. ', 'Mid Elev.', 'High Elev.']);"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "25d8b2e0-90b4-4a4c-b7b6-7cfa0fb8d01b",
-   "metadata": {},
-   "source": [
-    "**Looks the same! But notice the new units on the colobar scale.**\n",
-    "\n",
-    "Now let's save this raster to a new file."
    ]
   },
   {
