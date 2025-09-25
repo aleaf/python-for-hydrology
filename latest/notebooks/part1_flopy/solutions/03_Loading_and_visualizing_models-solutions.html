@@ -853,42 +853,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_imgc18cafcf0950447fb5dae910d9aab78d">
+  <img id="_anim_img1dd22f5f4e524a9e8fedb78413ac43da">
   <div class="anim-controls">
-    <input id="_anim_sliderc18cafcf0950447fb5dae910d9aab78d" type="range" class="anim-slider"
+    <input id="_anim_slider1dd22f5f4e524a9e8fedb78413ac43da" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="animc18cafcf0950447fb5dae910d9aab78d.set_frame(parseInt(this.value));">
+           oninput="anim1dd22f5f4e524a9e8fedb78413ac43da.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="animc18cafcf0950447fb5dae910d9aab78d.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="animc18cafcf0950447fb5dae910d9aab78d.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="animc18cafcf0950447fb5dae910d9aab78d.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="animc18cafcf0950447fb5dae910d9aab78d.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="animc18cafcf0950447fb5dae910d9aab78d.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="animc18cafcf0950447fb5dae910d9aab78d.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="animc18cafcf0950447fb5dae910d9aab78d.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="animc18cafcf0950447fb5dae910d9aab78d.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="animc18cafcf0950447fb5dae910d9aab78d.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim1dd22f5f4e524a9e8fedb78413ac43da.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selectc18cafcf0950447fb5dae910d9aab78d"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select1dd22f5f4e524a9e8fedb78413ac43da"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_c18cafcf0950447fb5dae910d9aab78d"
+      <input type="radio" name="state" value="once" id="_anim_radio1_1dd22f5f4e524a9e8fedb78413ac43da"
              >
-      <label for="_anim_radio1_c18cafcf0950447fb5dae910d9aab78d">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_c18cafcf0950447fb5dae910d9aab78d"
+      <label for="_anim_radio1_1dd22f5f4e524a9e8fedb78413ac43da">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_1dd22f5f4e524a9e8fedb78413ac43da"
              checked>
-      <label for="_anim_radio2_c18cafcf0950447fb5dae910d9aab78d">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_c18cafcf0950447fb5dae910d9aab78d"
+      <label for="_anim_radio2_1dd22f5f4e524a9e8fedb78413ac43da">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_1dd22f5f4e524a9e8fedb78413ac43da"
              >
-      <label for="_anim_radio3_c18cafcf0950447fb5dae910d9aab78d">Reflect</label>
+      <label for="_anim_radio3_1dd22f5f4e524a9e8fedb78413ac43da">Reflect</label>
     </form>
   </div>
 </div>
@@ -898,9 +898,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_imgc18cafcf0950447fb5dae910d9aab78d";
-    var slider_id = "_anim_sliderc18cafcf0950447fb5dae910d9aab78d";
-    var loop_select_id = "_anim_loop_selectc18cafcf0950447fb5dae910d9aab78d";
+    var img_id = "_anim_img1dd22f5f4e524a9e8fedb78413ac43da";
+    var slider_id = "_anim_slider1dd22f5f4e524a9e8fedb78413ac43da";
+    var loop_select_id = "_anim_loop_select1dd22f5f4e524a9e8fedb78413ac43da";
     var frames = new Array(64);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABXgAAAH0CAYAAACHNkWHAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -29575,7 +29575,7 @@ AAAAAElFTkSuQmCC\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        animc18cafcf0950447fb5dae910d9aab78d = new Animation(frames, img_id, slider_id, 200.0,
+        anim1dd22f5f4e524a9e8fedb78413ac43da = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -30092,7 +30092,7 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/09/25 19:17:03
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/09/25 19:56:18
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
@@ -30111,8 +30111,8 @@ and distribution information.
     Solving:  Stress period:    12    Time step:     1
     Solving:  Stress period:    13    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/09/25 19:17:05
- Elapsed run time:  2.399 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/09/25 19:56:21
+ Elapsed run time:  2.416 Seconds
 
 
 WARNING REPORT:
@@ -30152,7 +30152,7 @@ WARNING REPORT:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;flopy.utils.binaryfile.HeadFile at 0x7f82347ef8d0&gt;
+&lt;flopy.utils.binaryfile.HeadFile at 0x7f7cf8e87350&gt;
 </pre></div></div>
 </div>
 <p>The output file objects include various methods and attributes with information about the output. For example, the elapsed simulation times with output recrods.</p>
@@ -30789,7 +30789,7 @@ rec.array([(6560, 1, -163.5854572 ), (6566, 1,   85.47697217),
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.colorbar.Colorbar at 0x7f822dd78950&gt;
+&lt;matplotlib.colorbar.Colorbar at 0x7f7cf833a810&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -31492,7 +31492,7 @@ Text(0, 0.5, &#39;Elevation, in Meters&#39;)
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/tmp/ipykernel_12562/614846193.py:1: FutureWarning: The &#39;delim_whitespace&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep=&#39;\s+&#39;`` instead
+/tmp/ipykernel_12582/614846193.py:1: FutureWarning: The &#39;delim_whitespace&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep=&#39;\s+&#39;`` instead
   pd.read_csv(sim_ws / &#39;external/chd_001.dat&#39;, delim_whitespace=True)
 </pre></div></div>
 </div>
