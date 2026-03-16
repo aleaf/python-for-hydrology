@@ -473,6 +473,7 @@ float
  &#39;PendingDeprecationWarning&#39;,
  &#39;PermissionError&#39;,
  &#39;ProcessLookupError&#39;,
+ &#39;PythonFinalizationError&#39;,
  &#39;RecursionError&#39;,
  &#39;ReferenceError&#39;,
  &#39;ResourceWarning&#39;,
@@ -498,6 +499,7 @@ float
  &#39;ValueError&#39;,
  &#39;Warning&#39;,
  &#39;ZeroDivisionError&#39;,
+ &#39;_IncompleteInputError&#39;,
  &#39;__IPYTHON__&#39;,
  &#39;__build_class__&#39;,
  &#39;__debug__&#39;,
@@ -1265,7 +1267,7 @@ ab c ab c ab c ab c ab c
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;zip object at 0x7f22b075f700&gt;
+&lt;zip object at 0x7f7188bf1600&gt;
 &lt;class &#39;zip&#39;&gt;
 (1, 11, 111)
 (2, 22, 222)
@@ -2178,7 +2180,7 @@ howdy again
 <span class="ansi-green-fg">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-intense-fg ansi-bold">IPython</span><span class="ansi-blue-intense-fg ansi-bold">.</span><span class="ansi-blue-intense-fg ansi-bold">display</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Image, display
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span> display(<span class="ansi-yellow-bg">Image</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">filename</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-fg ansi-yellow-bg">&#39;</span><span class="ansi-yellow-fg ansi-yellow-bg">./data/lex.png</span><span class="ansi-yellow-fg ansi-yellow-bg">&#39;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">width</span><span class="ansi-yellow-bg">=</span><span class="ansi-green-fg ansi-yellow-bg">400</span><span class="ansi-yellow-bg">)</span>)
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/IPython/core/display.py:1025</span>, in <span class="ansi-cyan-fg">Image.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata, alt)</span>
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/IPython/core/display.py:1025</span>, in <span class="ansi-cyan-fg">Image.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata, alt)</span>
 <span class="ansi-green-fg">   1023</span> <span style="color: rgb(0,135,0)">self</span>.unconfined = unconfined
 <span class="ansi-green-fg">   1024</span> <span style="color: rgb(0,135,0)">self</span>.alt = alt
 <span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1025</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">super</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">Image</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">.</span><span class="ansi-blue-fg ansi-yellow-bg">__init__</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">url</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">url</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">filename</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">filename</span><span class="ansi-yellow-bg">,</span>
@@ -2186,20 +2188,20 @@ howdy again
 <span class="ansi-green-fg">   1028</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span>.width <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span style="color: rgb(0,135,0)">self</span>.metadata.get(<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">width</span><span class="ansi-yellow-fg">&#39;</span>, {}):
 <span class="ansi-green-fg">   1029</span>     <span style="color: rgb(0,135,0)">self</span>.width = metadata[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">width</span><span class="ansi-yellow-fg">&#39;</span>]
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/IPython/core/display.py:343</span>, in <span class="ansi-cyan-fg">DisplayObject.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, metadata)</span>
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/IPython/core/display.py:343</span>, in <span class="ansi-cyan-fg">DisplayObject.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, metadata)</span>
 <span class="ansi-green-fg">    340</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> <span style="color: rgb(0,135,0)">self</span>.metadata <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
 <span class="ansi-green-fg">    341</span>     <span style="color: rgb(0,135,0)">self</span>.metadata = {}
 <span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">343</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">reload</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-fg">    344</span> <span style="color: rgb(0,135,0)">self</span>._check_data()
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/IPython/core/display.py:1060</span>, in <span class="ansi-cyan-fg">Image.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/IPython/core/display.py:1060</span>, in <span class="ansi-cyan-fg">Image.reload</span><span class="ansi-blue-fg">(self)</span>
 <span class="ansi-green-fg">   1058</span> <span class="ansi-yellow-fg">&#34;&#34;&#34;Reload the raw data from file or URL.&#34;&#34;&#34;</span>
 <span class="ansi-green-fg">   1059</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span>.embed:
 <span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1060</span>     <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">super</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">Image</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">reload</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-fg">   1061</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span>.retina:
 <span class="ansi-green-fg">   1062</span>         <span style="color: rgb(0,135,0)">self</span>._retina_shape()
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/IPython/core/display.py:369</span>, in <span class="ansi-cyan-fg">DisplayObject.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/IPython/core/display.py:369</span>, in <span class="ansi-cyan-fg">DisplayObject.reload</span><span class="ansi-blue-fg">(self)</span>
 <span class="ansi-green-fg">    367</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span>.filename <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
 <span class="ansi-green-fg">    368</span>     encoding = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">b</span><span class="ansi-yellow-fg">&#34;</span> <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">self</span>._read_flags <span class="ansi-bold" style="color: rgb(0,135,0)">else</span> <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">utf-8</span><span class="ansi-yellow-fg">&#34;</span>
 <span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">369</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">open</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">filename</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_read_flags</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">)</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> f:
