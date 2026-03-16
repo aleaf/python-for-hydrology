@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>06a: Using Matplotlib to Create Animation &mdash; Python for Hydrology 1.0a documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
@@ -369,42 +369,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_img1b21a58fe33348f28add9b2c3744ec50">
+  <img id="_anim_imgacee2287727f46c9a2c51a72e1f1a5ea">
   <div class="anim-controls">
-    <input id="_anim_slider1b21a58fe33348f28add9b2c3744ec50" type="range" class="anim-slider"
+    <input id="_anim_slideracee2287727f46c9a2c51a72e1f1a5ea" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anim1b21a58fe33348f28add9b2c3744ec50.set_frame(parseInt(this.value));">
+           oninput="animacee2287727f46c9a2c51a72e1f1a5ea.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim1b21a58fe33348f28add9b2c3744ec50.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="animacee2287727f46c9a2c51a72e1f1a5ea.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anim1b21a58fe33348f28add9b2c3744ec50.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="animacee2287727f46c9a2c51a72e1f1a5ea.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anim1b21a58fe33348f28add9b2c3744ec50.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="animacee2287727f46c9a2c51a72e1f1a5ea.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anim1b21a58fe33348f28add9b2c3744ec50.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="animacee2287727f46c9a2c51a72e1f1a5ea.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anim1b21a58fe33348f28add9b2c3744ec50.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="animacee2287727f46c9a2c51a72e1f1a5ea.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anim1b21a58fe33348f28add9b2c3744ec50.play_animation()">
+      <button title="Play" aria-label="Play" onclick="animacee2287727f46c9a2c51a72e1f1a5ea.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anim1b21a58fe33348f28add9b2c3744ec50.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="animacee2287727f46c9a2c51a72e1f1a5ea.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anim1b21a58fe33348f28add9b2c3744ec50.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="animacee2287727f46c9a2c51a72e1f1a5ea.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anim1b21a58fe33348f28add9b2c3744ec50.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="animacee2287727f46c9a2c51a72e1f1a5ea.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select1b21a58fe33348f28add9b2c3744ec50"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selectacee2287727f46c9a2c51a72e1f1a5ea"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_1b21a58fe33348f28add9b2c3744ec50"
+      <input type="radio" name="state" value="once" id="_anim_radio1_acee2287727f46c9a2c51a72e1f1a5ea"
              >
-      <label for="_anim_radio1_1b21a58fe33348f28add9b2c3744ec50">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_1b21a58fe33348f28add9b2c3744ec50"
+      <label for="_anim_radio1_acee2287727f46c9a2c51a72e1f1a5ea">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_acee2287727f46c9a2c51a72e1f1a5ea"
              checked>
-      <label for="_anim_radio2_1b21a58fe33348f28add9b2c3744ec50">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_1b21a58fe33348f28add9b2c3744ec50"
+      <label for="_anim_radio2_acee2287727f46c9a2c51a72e1f1a5ea">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_acee2287727f46c9a2c51a72e1f1a5ea"
              >
-      <label for="_anim_radio3_1b21a58fe33348f28add9b2c3744ec50">Reflect</label>
+      <label for="_anim_radio3_acee2287727f46c9a2c51a72e1f1a5ea">Reflect</label>
     </form>
   </div>
 </div>
@@ -414,9 +414,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_img1b21a58fe33348f28add9b2c3744ec50";
-    var slider_id = "_anim_slider1b21a58fe33348f28add9b2c3744ec50";
-    var loop_select_id = "_anim_loop_select1b21a58fe33348f28add9b2c3744ec50";
+    var img_id = "_anim_imgacee2287727f46c9a2c51a72e1f1a5ea";
+    var slider_id = "_anim_slideracee2287727f46c9a2c51a72e1f1a5ea";
+    var loop_select_id = "_anim_loop_selectacee2287727f46c9a2c51a72e1f1a5ea";
     var frames = new Array(50);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAYAAAA10dzkAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -18916,7 +18916,7 @@ gg==\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anim1b21a58fe33348f28add9b2c3744ec50 = new Animation(frames, img_id, slider_id, 200.0,
+        animacee2287727f46c9a2c51a72e1f1a5ea = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -18955,7 +18955,7 @@ gg==\
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2026, USGS Python for Hydrology instructors.
-      <span class="lastupdated">Last updated on Jan 02, 2026.
+      <span class="lastupdated">Last updated on Mar 16, 2026.
       </span></p>
   </div>
 

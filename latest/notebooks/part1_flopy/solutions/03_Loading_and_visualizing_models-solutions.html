@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>03: Loading and visualizing groundwater models &mdash; Python for Hydrology 1.0a documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../../_static/nbsphinx-code-cells.css?v=2aa19091" />
@@ -928,42 +928,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_imga07cd94860ca49ad8b0d1e6c7068a3df">
+  <img id="_anim_img22907da65da043ca8ba48ae47a7d9a1b">
   <div class="anim-controls">
-    <input id="_anim_slidera07cd94860ca49ad8b0d1e6c7068a3df" type="range" class="anim-slider"
+    <input id="_anim_slider22907da65da043ca8ba48ae47a7d9a1b" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anima07cd94860ca49ad8b0d1e6c7068a3df.set_frame(parseInt(this.value));">
+           oninput="anim22907da65da043ca8ba48ae47a7d9a1b.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anima07cd94860ca49ad8b0d1e6c7068a3df.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim22907da65da043ca8ba48ae47a7d9a1b.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anima07cd94860ca49ad8b0d1e6c7068a3df.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anim22907da65da043ca8ba48ae47a7d9a1b.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anima07cd94860ca49ad8b0d1e6c7068a3df.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim22907da65da043ca8ba48ae47a7d9a1b.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anima07cd94860ca49ad8b0d1e6c7068a3df.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim22907da65da043ca8ba48ae47a7d9a1b.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anima07cd94860ca49ad8b0d1e6c7068a3df.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anim22907da65da043ca8ba48ae47a7d9a1b.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anima07cd94860ca49ad8b0d1e6c7068a3df.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anim22907da65da043ca8ba48ae47a7d9a1b.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anima07cd94860ca49ad8b0d1e6c7068a3df.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anim22907da65da043ca8ba48ae47a7d9a1b.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anima07cd94860ca49ad8b0d1e6c7068a3df.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anim22907da65da043ca8ba48ae47a7d9a1b.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anima07cd94860ca49ad8b0d1e6c7068a3df.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim22907da65da043ca8ba48ae47a7d9a1b.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selecta07cd94860ca49ad8b0d1e6c7068a3df"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select22907da65da043ca8ba48ae47a7d9a1b"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_a07cd94860ca49ad8b0d1e6c7068a3df"
+      <input type="radio" name="state" value="once" id="_anim_radio1_22907da65da043ca8ba48ae47a7d9a1b"
              >
-      <label for="_anim_radio1_a07cd94860ca49ad8b0d1e6c7068a3df">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_a07cd94860ca49ad8b0d1e6c7068a3df"
+      <label for="_anim_radio1_22907da65da043ca8ba48ae47a7d9a1b">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_22907da65da043ca8ba48ae47a7d9a1b"
              checked>
-      <label for="_anim_radio2_a07cd94860ca49ad8b0d1e6c7068a3df">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_a07cd94860ca49ad8b0d1e6c7068a3df"
+      <label for="_anim_radio2_22907da65da043ca8ba48ae47a7d9a1b">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_22907da65da043ca8ba48ae47a7d9a1b"
              >
-      <label for="_anim_radio3_a07cd94860ca49ad8b0d1e6c7068a3df">Reflect</label>
+      <label for="_anim_radio3_22907da65da043ca8ba48ae47a7d9a1b">Reflect</label>
     </form>
   </div>
 </div>
@@ -973,9 +973,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_imga07cd94860ca49ad8b0d1e6c7068a3df";
-    var slider_id = "_anim_slidera07cd94860ca49ad8b0d1e6c7068a3df";
-    var loop_select_id = "_anim_loop_selecta07cd94860ca49ad8b0d1e6c7068a3df";
+    var img_id = "_anim_img22907da65da043ca8ba48ae47a7d9a1b";
+    var slider_id = "_anim_slider22907da65da043ca8ba48ae47a7d9a1b";
+    var loop_select_id = "_anim_loop_select22907da65da043ca8ba48ae47a7d9a1b";
     var frames = new Array(64);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABXgAAAH0CAYAAACHNkWHAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -27326,7 +27326,7 @@ gg==\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anima07cd94860ca49ad8b0d1e6c7068a3df = new Animation(frames, img_id, slider_id, 200.0,
+        anim22907da65da043ca8ba48ae47a7d9a1b = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -27843,7 +27843,7 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/01/02 15:28:53
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 13:08:46
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
@@ -27862,8 +27862,8 @@ and distribution information.
     Solving:  Stress period:    12    Time step:     1
     Solving:  Stress period:    13    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/01/02 15:28:55
- Elapsed run time:  1.966 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 13:08:48
+ Elapsed run time:  2.024 Seconds
 
 
 WARNING REPORT:
@@ -27902,7 +27902,7 @@ WARNING REPORT:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;flopy.utils.binaryfile.HeadFile at 0x7feaf00a3c50&gt;
+&lt;flopy.utils.binaryfile.HeadFile at 0x7fd782d836d0&gt;
 </pre></div></div>
 </div>
 <p>The output file objects include various methods and attributes with information about the output. For example, the elapsed simulation times with output recrods.</p>
@@ -28539,7 +28539,7 @@ rec.array([(6560, 1, -163.5854572 ), (6566, 1,   85.47697217),
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.colorbar.Colorbar at 0x7feaf00f14d0&gt;
+&lt;matplotlib.colorbar.Colorbar at 0x7fd782dc1890&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -29233,18 +29233,9 @@ Text(0, 0.5, &#39;Elevation, in Meters&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">sim_ws</span> <span class="o">/</span> <span class="s1">&#39;external/chd_001.dat&#39;</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">sim_ws</span> <span class="o">/</span> <span class="s1">&#39;external/chd_001.dat&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-/tmp/ipykernel_12949/614846193.py:1: FutureWarning: The &#39;delim_whitespace&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep=&#39;\s+&#39;`` instead
-  pd.read_csv(sim_ws / &#39;external/chd_001.dat&#39;, delim_whitespace=True)
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
@@ -29668,7 +29659,7 @@ Index([&#39;STO-SS_IN&#39;, &#39;STO-SY_IN&#39;, &#39;WEL_IN&#39;, &#39;RCHA_IN&
        &#39;LAK_IN&#39;, &#39;TOTAL_IN&#39;, &#39;STO-SS_OUT&#39;, &#39;STO-SY_OUT&#39;, &#39;WEL_OUT&#39;, &#39;RCHA_OUT&#39;,
        &#39;CHD_OUT&#39;, &#39;SFR_OUT&#39;, &#39;LAK_OUT&#39;, &#39;TOTAL_OUT&#39;, &#39;IN-OUT&#39;,
        &#39;PERCENT_DISCREPANCY&#39;],
-      dtype=&#39;object&#39;)
+      dtype=&#39;str&#39;)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -29704,6 +29695,10 @@ Text(0, 0.5, &#39;Percent mass balance error&#39;)
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">in_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;STO-SS_IN&#39;</span><span class="p">,</span> <span class="s1">&#39;STO-SY_IN&#39;</span><span class="p">,</span> <span class="s1">&#39;WEL_IN&#39;</span><span class="p">,</span> <span class="s1">&#39;RCHA_IN&#39;</span><span class="p">,</span> <span class="s1">&#39;CHD_IN&#39;</span><span class="p">,</span> <span class="s1">&#39;SFR_IN&#39;</span><span class="p">,</span> <span class="s1">&#39;LAK_IN&#39;</span><span class="p">]</span>
 <span class="n">out_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_IN&#39;</span><span class="p">,</span> <span class="s1">&#39;_OUT&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">in_cols</span><span class="p">]</span>
+<span class="c1"># as of pandas 3.0.1,</span>
+<span class="c1"># the datatime index of the flux dataframe produced by Flopy produces an error with .plot.bar();</span>
+<span class="c1"># switch the index to a categorical (date string) index instead</span>
+<span class="n">flux</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">flux</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">flux</span><span class="p">[</span><span class="n">in_cols</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="p">(</span><span class="o">-</span><span class="n">flux</span><span class="p">[</span><span class="n">out_cols</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -29753,7 +29748,7 @@ Text(0, 0.5, &#39;Simulated Flux, in $m^3/d$&#39;)
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2026, USGS Python for Hydrology instructors.
-      <span class="lastupdated">Last updated on Jan 02, 2026.
+      <span class="lastupdated">Last updated on Mar 16, 2026.
       </span></p>
   </div>
 

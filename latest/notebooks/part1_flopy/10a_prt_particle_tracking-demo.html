@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>10a: Particle tracking with MODFLOW 6 PRT &mdash; Python for Hydrology 1.0a documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
@@ -328,15 +328,15 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/01/02 15:28:09
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 13:08:03
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
     Solving:  Stress period:     1    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/01/02 15:28:09
- Elapsed run time:  0.398 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 13:08:03
+ Elapsed run time:  0.422 Seconds
 
 
 WARNING REPORT:
@@ -1072,15 +1072,15 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/01/02 15:28:10
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 13:08:04
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
     Solving:  Stress period:     1    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/01/02 15:28:10
- Elapsed run time:  0.104 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 13:08:04
+ Elapsed run time:  0.105 Seconds
 
  Normal termination of simulation.
 </pre></div></div>
@@ -1380,7 +1380,7 @@ and distribution information.
 <br/></pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
@@ -1391,6 +1391,17 @@ and distribution information.
                        <span class="n">crs</span><span class="o">=</span><span class="n">gwf</span><span class="o">.</span><span class="n">modelgrid</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/runner/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/flopy/discretization/grid.py:973: Pandas4Warning: The copy keyword is deprecated and will be removed in a future version. Copy-on-Write is active in pandas since 3.0 which utilizes a lazy copy mechanism that defers copies until necessary. Use .copy() to make an eager copy if necessary.
+  x, y = x.astype(float, copy=True), y.astype(float, copy=True)
+/home/runner/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/flopy/discretization/grid.py:973: Pandas4Warning: The copy keyword is deprecated and will be removed in a future version. Copy-on-Write is active in pandas since 3.0 which utilizes a lazy copy mechanism that defers copies until necessary. Use .copy() to make an eager copy if necessary.
+  x, y = x.astype(float, copy=True), y.astype(float, copy=True)
+</pre></div></div>
 </div>
 <p>Write particles terminating in Well and SFR cells to separate layers</p>
 <div class="nbinput nblast docutils container">
@@ -1472,7 +1483,7 @@ and distribution information.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x7f46b7db8b50&gt;
+&lt;matplotlib.legend.Legend at 0x7fee8563e650&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1497,7 +1508,7 @@ and distribution information.
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2026, USGS Python for Hydrology instructors.
-      <span class="lastupdated">Last updated on Jan 02, 2026.
+      <span class="lastupdated">Last updated on Mar 16, 2026.
       </span></p>
   </div>
 

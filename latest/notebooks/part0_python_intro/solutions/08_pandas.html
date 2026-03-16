@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>08: Working with tabular data in Pandas &mdash; Python for Hydrology 1.0a documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../../_static/nbsphinx-code-cells.css?v=2aa19091" />
@@ -174,7 +174,7 @@
              
   <section id="08:-Working-with-tabular-data-in-Pandas">
 <h1>08: Working with tabular data in Pandas<a class="headerlink" href="#08:-Working-with-tabular-data-in-Pandas" title="Link to this heading"></a></h1>
-<p><img alt="e657bb8c858f4a42a92d6de466be3378" src="../../../_images/panda.jpg" /></p>
+<p><img alt="70d13df7354c43cd8fbaeb6952c57cdd" src="../../../_images/panda.jpg" /></p>
 <section id="Not-that-type-of-Panda----Python's-Pandas-package">
 <h2>Not that type of Panda – Python’s Pandas package<a class="headerlink" href="#Not-that-type-of-Panda----Python's-Pandas-package" title="Link to this heading"></a></h2>
 <p>Pandas is a powerful, flexible and easy to use open source data analysis and manipulation tool. Pandas is commonly used for operations that would normally be done in a spreadsheet environment and includes powerful data analysis and manipulation tools.</p>
@@ -680,7 +680,7 @@
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -752,7 +752,7 @@
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -810,7 +810,7 @@ Index([&#39;agency_cd&#39;, &#39;site_no&#39;, &#39;station_nm&#39;, &#39;site_t
        &#39;local_time_fg&#39;, &#39;reliability_cd&#39;, &#39;gw_file_cd&#39;, &#39;nat_aqfr_cd&#39;,
        &#39;aqfr_cd&#39;, &#39;aqfr_type_cd&#39;, &#39;well_depth_va&#39;, &#39;hole_depth_va&#39;,
        &#39;depth_src_cd&#39;, &#39;project_no&#39;],
-      dtype=&#39;object&#39;)
+      dtype=&#39;str&#39;)
 [&#39;agency_cd&#39;, &#39;site_no&#39;, &#39;station_nm&#39;, &#39;site_tp_cd&#39;, &#39;lat_va&#39;, &#39;long_va&#39;, &#39;dec_lat_va&#39;, &#39;dec_long_va&#39;, &#39;coord_meth_cd&#39;, &#39;coord_acy_cd&#39;, &#39;coord_datum_cd&#39;, &#39;dec_coord_datum_cd&#39;, &#39;district_cd&#39;, &#39;state_cd&#39;, &#39;county_cd&#39;, &#39;country_cd&#39;, &#39;land_net_ds&#39;, &#39;map_nm&#39;, &#39;map_scale_fc&#39;, &#39;alt_va&#39;, &#39;alt_meth_cd&#39;, &#39;alt_acy_va&#39;, &#39;alt_datum_cd&#39;, &#39;huc_cd&#39;, &#39;basin_cd&#39;, &#39;topo_cd&#39;, &#39;instruments_cd&#39;, &#39;construction_dt&#39;, &#39;inventory_dt&#39;, &#39;drain_area_va&#39;, &#39;contrib_drain_area_va&#39;, &#39;tz_cd&#39;, &#39;local_time_fg&#39;, &#39;reliability_cd&#39;, &#39;gw_file_cd&#39;, &#39;nat_aqfr_cd&#39;, &#39;aqfr_cd&#39;, &#39;aqfr_type_cd&#39;, &#39;well_depth_va&#39;, &#39;hole_depth_va&#39;, &#39;depth_src_cd&#39;, &#39;project_no&#39;]
 </pre></div></div>
 </div>
@@ -1105,7 +1105,7 @@ Index([&#39;agency_cd&#39;, &#39;site_no&#39;, &#39;station_nm&#39;, &#39;site_t
 25    383017122580301
 26    383028122554501
 27    383034122590701
-Name: site_no, dtype: object
+Name: site_no, dtype: str
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1151,7 +1151,7 @@ Name: site_no, dtype: object
 25                                  008N010W28RU01M
 26                          HOBSON C NR HACIENDA CA
 27                                  008N010W29H004M
-Name: station_nm, dtype: object
+Name: station_nm, dtype: str
 </pre></div></div>
 </div>
 <p>getting data from a dataframe as a numpy array can be accomplished by using <code class="docutils literal notranslate"><span class="pre">.values</span></code></p>
@@ -1169,22 +1169,36 @@ Name: station_nm, dtype: object
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
-       &#39;RUSSIAN R A JOHNSONS BEACH A GUERNEVILLE CA&#39;,
-       &#39;RUSSIAN R A VACATION BEACH CA&#39;, &#39;BIG AUSTIN C A CAZADERO CA&#39;,
-       &#39;AUSTIN C NR CAZADERO CA&#39;, &#39;RUSSIAN R A DUNCANS MILLS CA&#39;,
-       &#39;FREEZEOUT C NR DUNCANS MILLS CA&#39;, &#39;007N011W14NU01M&#39;,
-       &#39;007N011W14NU03M&#39;, &#39;DUTCH BILL C A MONTE RIO CA&#39;,
-       &#39;RUSSIAN R A CASINI RANCH NR DUNCANS MILLS CA&#39;,
-       &#39;RUSSIAN R A MONTE RIO CA&#39;, &#39;007N010W10H001M&#39;,
-       &#39;AUSTIN C NR DUNCANS MILLS CA&#39;, &#39;007N010W07D001M&#39;,
-       &#39;HULBERT C NR GUERNEVILLE CA&#39;, &#39;POCKET CYN C A GUERNEVILLE CA&#39;,
-       &#39;008N009W31C002M&#39;, &#39;008N009W31C003M&#39;, &#39;008N009W31C004M&#39;,
-       &#39;008N009W31C005M&#39;, &#39;FIFE C A GUERNEVILLE CA&#39;,
-       &#39;GREEN VALLEY C NR MIRABEL HEIGHTS CA&#39;,
-       &#39;RUSSIAN R A ODD FELLOWS PARK NR RIO NIDO CA&#39;, &#39;008N011W27N001M&#39;,
-       &#39;008N010W28RU01M&#39;, &#39;HOBSON C NR HACIENDA CA&#39;, &#39;008N010W29H004M&#39;],
-      dtype=object)
+&lt;ArrowStringArray&gt;
+[&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
+   &#39;RUSSIAN R A JOHNSONS BEACH A GUERNEVILLE CA&#39;,
+                 &#39;RUSSIAN R A VACATION BEACH CA&#39;,
+                    &#39;BIG AUSTIN C A CAZADERO CA&#39;,
+                       &#39;AUSTIN C NR CAZADERO CA&#39;,
+                  &#39;RUSSIAN R A DUNCANS MILLS CA&#39;,
+               &#39;FREEZEOUT C NR DUNCANS MILLS CA&#39;,
+                               &#39;007N011W14NU01M&#39;,
+                               &#39;007N011W14NU03M&#39;,
+                   &#39;DUTCH BILL C A MONTE RIO CA&#39;,
+  &#39;RUSSIAN R A CASINI RANCH NR DUNCANS MILLS CA&#39;,
+                      &#39;RUSSIAN R A MONTE RIO CA&#39;,
+                               &#39;007N010W10H001M&#39;,
+                  &#39;AUSTIN C NR DUNCANS MILLS CA&#39;,
+                               &#39;007N010W07D001M&#39;,
+                   &#39;HULBERT C NR GUERNEVILLE CA&#39;,
+                 &#39;POCKET CYN C A GUERNEVILLE CA&#39;,
+                               &#39;008N009W31C002M&#39;,
+                               &#39;008N009W31C003M&#39;,
+                               &#39;008N009W31C004M&#39;,
+                               &#39;008N009W31C005M&#39;,
+                       &#39;FIFE C A GUERNEVILLE CA&#39;,
+          &#39;GREEN VALLEY C NR MIRABEL HEIGHTS CA&#39;,
+   &#39;RUSSIAN R A ODD FELLOWS PARK NR RIO NIDO CA&#39;,
+                               &#39;008N011W27N001M&#39;,
+                               &#39;008N010W28RU01M&#39;,
+                       &#39;HOBSON C NR HACIENDA CA&#39;,
+                               &#39;008N010W29H004M&#39;]
+Length: 28, dtype: str
 </pre></div></div>
 </div>
 <section id="Selection-by-position">
@@ -1388,7 +1402,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1412,7 +1426,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1436,7 +1450,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1508,7 +1522,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1556,7 +1570,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1580,7 +1594,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1628,7 +1642,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1729,7 +1743,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1753,7 +1767,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1777,7 +1791,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1849,7 +1863,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1897,7 +1911,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1921,7 +1935,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1969,7 +1983,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3410,7 +3424,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3434,7 +3448,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3458,7 +3472,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3530,7 +3544,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3578,7 +3592,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3602,7 +3616,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3650,7 +3664,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
       <td>...</td>
       <td>Y</td>
       <td>C</td>
-      <td>YY   Y</td>
+      <td>YY&nbsp;&nbsp; Y</td>
       <td>N100CACSTL</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -5038,7 +5052,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/tmp/ipykernel_9993/1871956059.py:4: UserWarning: This axis already has a converter set and is updating to a potentially incompatible converter
+/tmp/ipykernel_7552/1871956059.py:4: UserWarning: This axis already has a converter set and is updating to a potentially incompatible converter
   ax.plot(decomposition.trend.index, decomposition.trend, &#34;r-&#34;, lw=1.5)
 </pre></div></div>
 </div>
@@ -5718,7 +5732,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
 </div></div>
 </div>
 <p>But first let’s also set the water year by date on this dataframe and drop the single nan value from the dataframe</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
@@ -5727,6 +5741,15 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
 <span class="n">df_data</span><span class="p">[</span><span class="s2">&quot;detrended&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">detrend</span><span class="p">(</span><span class="n">df_data</span><span class="o">.</span><span class="n">Q</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/tmp/ipykernel_7552/608845639.py:1: Pandas4Warning: &#39;d&#39; is deprecated and will be removed in a future version, please use &#39;D&#39; instead.
+  df_data[&#39;water_year&#39;] = df_data.index.shift(30+31+31,freq=&#39;d&#39;).year
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
@@ -5874,7 +5897,7 @@ array([&#39;RUSSIAN R A HACIENDA BRIDGE NR GUERNEVILLE CA&#39;,
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2026, USGS Python for Hydrology instructors.
-      <span class="lastupdated">Last updated on Jan 02, 2026.
+      <span class="lastupdated">Last updated on Mar 16, 2026.
       </span></p>
   </div>
 
