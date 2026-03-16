@@ -328,15 +328,15 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 16:54:39
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 17:49:32
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
     Solving:  Stress period:     1    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 16:54:40
- Elapsed run time:  0.407 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 17:49:33
+ Elapsed run time:  0.418 Seconds
 
 
 WARNING REPORT:
@@ -1072,15 +1072,15 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 16:54:41
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 17:49:34
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
     Solving:  Stress period:     1    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 16:54:41
- Elapsed run time:  0.105 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 17:49:34
+ Elapsed run time:  0.106 Seconds
 
  Normal termination of simulation.
 </pre></div></div>
@@ -1126,9 +1126,11 @@ and distribution information.
     <span class="n">particle_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">prt_model_ws</span> <span class="o">/</span> <span class="n">trackcsvfile_prt</span><span class="p">)</span>
     <span class="n">particle_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;error reading file: </span><span class="si">{</span><span class="n">prt_model_ws</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">trackcsvfile_prt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;prt_sim.sim_path: </span><span class="si">{</span><span class="n">prt_sim</span><span class="o">.</span><span class="n">sim_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">error reading file: </span><span class="si">{</span><span class="n">prt_model_ws</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">trackcsvfile_prt</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="sa">f</span><span class="s2">&quot;prt_sim.sim_path: </span><span class="si">{</span><span class="n">prt_sim</span><span class="o">.</span><span class="n">sim_path</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1347,7 +1349,7 @@ and distribution information.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x7fc0bb7a08d0&gt;
+&lt;matplotlib.legend.Legend at 0x7fc1e27f3650&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">

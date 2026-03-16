@@ -616,9 +616,11 @@
     "    particle_data = pd.read_csv(prt_model_ws / trackcsvfile_prt)\n",
     "    particle_data.head()\n",
     "except Exception as e:\n",
-    "    print(e)\n",
-    "    print(f\"error reading file: {prt_model_ws / trackcsvfile_prt}\")\n",
-    "    print(f\"prt_sim.sim_path: {prt_sim.sim_path}\")"
+    "    text = (\n",
+    "        f\"{e}\\n\\nerror reading file: {prt_model_ws / trackcsvfile_prt}\\n\"\n",
+    "        f\"prt_sim.sim_path: {prt_sim.sim_path}\"\n",
+    "    )\n",
+    "    raise Exception(text)"
    ]
   },
   {
