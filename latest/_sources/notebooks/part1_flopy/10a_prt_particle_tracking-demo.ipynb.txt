@@ -639,6 +639,7 @@
     "    perioddata={0: [\"FIRST\"]},\n",
     "    exit_solve_tolerance=1e-5,\n",
     "    extend_tracking=True,\n",
+    "    coordinate_check_method=None,\n",
     "    #istopzone=istopzone\n",
     ")"
    ]

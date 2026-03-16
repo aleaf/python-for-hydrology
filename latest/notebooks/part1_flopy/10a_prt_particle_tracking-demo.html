@@ -483,15 +483,15 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 21:06:53
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 21:31:43
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
     Solving:  Stress period:     1    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 21:06:53
- Elapsed run time:  0.417 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 21:31:43
+ Elapsed run time:  0.414 Seconds
 
 
 WARNING REPORT:
@@ -969,70 +969,60 @@ Layer_3{internal}
     <span class="n">perioddata</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;FIRST&quot;</span><span class="p">]},</span>
     <span class="n">exit_solve_tolerance</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span>
     <span class="n">extend_tracking</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">coordinate_check_method</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="c1">#istopzone=istopzone</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-package_name = prp_0
-filename = project-prt.prp
-package_type = prp
-model_or_simulation_package = model
-model_name = project-prt
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FlopyException</span>                            Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[24]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-yellow-bg">flopy</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">mf6</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">ModflowPrtprp</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">      2</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">prt</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">      3</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">nreleasepts</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">len</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">prt_start_data</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">      4</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg" style="color: rgb(95,135,135)">#packagedata=prt_particle_data,</span>
+<span class="ansi-green-fg">      5</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">packagedata</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">prt_start_data</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">to_records</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">index</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">False</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">tolist</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">      6</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">local_z</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">True</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">      7</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">boundnames</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">True</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">      8</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">perioddata</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">{</span><span class="ansi-green-fg ansi-yellow-bg">0</span><span class="ansi-yellow-bg">:</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">FIRST</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">}</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">      9</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">exit_solve_tolerance</span><span class="ansi-yellow-bg">=</span><span class="ansi-green-fg ansi-yellow-bg">1e-5</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">     10</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">extend_tracking</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">True</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">     11</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">coordinate_check_method</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">     12</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg" style="color: rgb(95,135,135)">#istopzone=istopzone</span>
+<span class="ansi-green-fg">     13</span> <span class="ansi-yellow-bg">)</span>
 
-Block options
---------------------
-boundnames
-{internal}
-(True)
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/mf6/modflow/mfprtprp.py:731</span>, in <span class="ansi-cyan-fg">ModflowPrtprp.__init__</span><span class="ansi-blue-fg">(self, model, loading_package, boundnames, print_input, dev_exit_solve_method, exit_solve_tolerance, local_z, extend_tracking, track_filerecord, trackcsv_filerecord, stoptime, stoptraveltime, stop_at_weak_sink, istopzone, drape, release_timesrecord, release_timesfilerecord, dry_tracking_method, dev_forceternary, release_time_tolerance, release_time_frequency, dev_cycle_detection_window, nreleasepts, nreleasetimes, packagedata, releasetimes, perioddata, filename, pname, **kwargs)</span>
+<span class="ansi-green-fg">    697</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">__init__</span>(
+<span class="ansi-green-fg">    698</span>     <span style="color: rgb(0,135,0)">self</span>,
+<span class="ansi-green-fg">    699</span>     model,
+<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">    728</span>     **kwargs,
+<span class="ansi-green-fg">    729</span> ):
+<span class="ansi-green-fg">    730</span> <span style="color: rgb(188,188,188)">    </span><span class="ansi-yellow-fg">&#34;&#34;&#34;Initialize ModflowPrtprp.&#34;&#34;&#34;</span>
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">731</span>     <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">super</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">.</span><span class="ansi-blue-fg ansi-yellow-bg">__init__</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">    732</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">parent</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">model</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    733</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">package_type</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">prp</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    734</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">filename</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">filename</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    735</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">pname</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">pname</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    736</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">loading_package</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">loading_package</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    737</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    738</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    740</span>     <span style="color: rgb(0,135,0)">self</span>.boundnames = <span style="color: rgb(0,135,0)">self</span>.build_mfdata(<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">boundnames</span><span class="ansi-yellow-fg">&#34;</span>, boundnames)
+<span class="ansi-green-fg">    741</span>     <span style="color: rgb(0,135,0)">self</span>.print_input = <span style="color: rgb(0,135,0)">self</span>.build_mfdata(<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">print_input</span><span class="ansi-yellow-fg">&#34;</span>, print_input)
 
-exit_solve_tolerance
-{internal}
-(1e-05)
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/mf6/mfpackage.py:1894</span>, in <span class="ansi-cyan-fg">MFPackage.__init__</span><span class="ansi-blue-fg">(self, parent, package_type, filename, pname, loading_package, **kwargs)</span>
+<span class="ansi-green-fg">   1890</span> kwargs_str = <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">, </span><span class="ansi-yellow-fg">&#34;</span>.join(kwargs.keys())
+<span class="ansi-green-fg">   1891</span> excpt_str = (
+<span class="ansi-green-fg">   1892</span>     <span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">Extraneous kwargs </span><span class="ansi-yellow-fg">&#34;</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>kwargs_str<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg"> provided to MFPackage.</span><span class="ansi-yellow-fg">&#39;</span>
+<span class="ansi-green-fg">   1893</span> )
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1894</span> <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> FlopyException(excpt_str)
 
-local_z
-{internal}
-(True)
-
-extend_tracking
-{internal}
-(True)
-
-
-Block dimensions
---------------------
-nreleasepts
-{internal}
-(6)
-
-
-Block packagedata
---------------------
-packagedata
-{internal}
-(rec.array([(0, (0, 1352), 375., 7125., 0.99, &#39;prt_1352&#39;),
-           (1, (0, 1353), 625., 7125., 0.99, &#39;prt_1353&#39;),
-           (2, (0, 1459), 375., 6875., 0.99, &#39;prt_1459&#39;),
-           (3, (0, 1460), 625., 6875., 0.99, &#39;prt_1460&#39;),
-           (4, (0, 1581), 375., 6625., 0.99, &#39;prt_1581&#39;),
-           (5, (0, 1582), 625., 6625., 0.99, &#39;prt_1582&#39;)],
-          dtype=[(&#39;irptno&#39;, &#39;&lt;i8&#39;), (&#39;cellid&#39;, &#39;O&#39;), (&#39;xrpt&#39;, &#39;&lt;f8&#39;), (&#39;yrpt&#39;, &#39;&lt;f8&#39;), (&#39;zrpt&#39;, &#39;&lt;f8&#39;), (&#39;boundname&#39;, &#39;O&#39;)]))
-
-
-Block period
---------------------
-perioddata
-{internal}
-(rec.array([(&#39;FIRST&#39;, None)],
-          dtype=[(&#39;releasesetting&#39;, &#39;O&#39;), (&#39;releasesetting_data&#39;, &#39;O&#39;)]))
-
-
+<span class="ansi-red-fg">FlopyException</span>: Extraneous kwargs &#34;coordinate_check_method&#34; provided to MFPackage. ()
 </pre></div></div>
 </div>
 </section>
@@ -1208,19 +1198,21 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 21:06:54
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 21:31:44
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
-    Solving:  Stress period:     1    Time step:     1
 
 ERROR REPORT:
 
-  1. Error in              PRP: Flow model interface does not contain
-     ICELLTYPE. ICELLTYPE is required for PRT to distinguish convertible
-     cells from confined cells if LOCAL_Z release coordinates are provided.
-     Make sure a GWFGRID entry is configured in the PRT FMI package.
+  1. Required block &#34;OPTIONS&#34; not found.  Found end of file instead.
+
+UNIT ERROR REPORT:
+
+  1. Error occurred while reading file
+     &#39;/home/runner/work/python-for-hydrology/python-for-hydrology/docs/source/
+     notebooks/part1_flopy/temp/ex10a/prt/project-prt.prp&#39;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1270,19 +1262,21 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 21:06:54
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 21:31:44
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
-    Solving:  Stress period:     1    Time step:     1
 
 ERROR REPORT:
 
-  1. Error in              PRP: Flow model interface does not contain
-     ICELLTYPE. ICELLTYPE is required for PRT to distinguish convertible
-     cells from confined cells if LOCAL_Z release coordinates are provided.
-     Make sure a GWFGRID entry is configured in the PRT FMI package.
+  1. Required block &#34;OPTIONS&#34; not found.  Found end of file instead.
+
+UNIT ERROR REPORT:
+
+  1. Error occurred while reading file
+     &#39;/home/runner/work/python-for-hydrology/python-for-hydrology/docs/source/
+     notebooks/part1_flopy/temp/ex10a/prt/project-prt.prp&#39;
 </pre></div></div>
 </div>
 <section id="Post-Process-the-MODFLOW-and-PRT-Results">
@@ -1319,50 +1313,72 @@ ERROR REPORT:
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[32]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> particle_data = <span class="ansi-yellow-bg">pd</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">read_csv</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">prt_model_ws</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">/</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">trackcsvfile_prt</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">      2</span> particle_data.head()
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/pandas/io/parsers/readers.py:873</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, skip_blank_lines, parse_dates, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+<span class="ansi-green-fg">    861</span> kwds_defaults = _refine_defaults_read(
+<span class="ansi-green-fg">    862</span>     dialect,
+<span class="ansi-green-fg">    863</span>     delimiter,
+<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">    869</span>     dtype_backend=dtype_backend,
+<span class="ansi-green-fg">    870</span> )
+<span class="ansi-green-fg">    871</span> kwds.update(kwds_defaults)
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">873</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_read</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">filepath_or_buffer</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">kwds</span><span class="ansi-yellow-bg">)</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>kper</th>
-      <th>kstp</th>
-      <th>imdl</th>
-      <th>iprp</th>
-      <th>irpt</th>
-      <th>ilay</th>
-      <th>icell</th>
-      <th>izone</th>
-      <th>istatus</th>
-      <th>ireason</th>
-      <th>trelease</th>
-      <th>t</th>
-      <th>x</th>
-      <th>y</th>
-      <th>z</th>
-      <th>name</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/pandas/io/parsers/readers.py:300</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-fg">    297</span> _validate_names(kwds.get(<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">names</span><span class="ansi-yellow-fg">&#34;</span>, <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>))
+<span class="ansi-green-fg">    299</span> <span style="color: rgb(95,135,135)"># Create the parser.</span>
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">300</span> parser = <span class="ansi-yellow-bg">TextFileReader</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">filepath_or_buffer</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwds</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    302</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> chunksize <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> iterator:
+<span class="ansi-green-fg">    303</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> parser
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/pandas/io/parsers/readers.py:1645</span>, in <span class="ansi-cyan-fg">TextFileReader.__init__</span><span class="ansi-blue-fg">(self, f, engine, **kwds)</span>
+<span class="ansi-green-fg">   1642</span>     <span style="color: rgb(0,135,0)">self</span>.options[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">has_index_names</span><span class="ansi-yellow-fg">&#34;</span>] = kwds[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">has_index_names</span><span class="ansi-yellow-fg">&#34;</span>]
+<span class="ansi-green-fg">   1644</span> <span style="color: rgb(0,135,0)">self</span>.handles: IOHandles | <span class="ansi-bold" style="color: rgb(0,135,0)">None</span> = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1645</span> <span style="color: rgb(0,135,0)">self</span>._engine = <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_make_engine</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">f</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">engine</span><span class="ansi-yellow-bg">)</span>
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/pandas/io/parsers/readers.py:1904</span>, in <span class="ansi-cyan-fg">TextFileReader._make_engine</span><span class="ansi-blue-fg">(self, f, engine)</span>
+<span class="ansi-green-fg">   1902</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">b</span><span class="ansi-yellow-fg">&#34;</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> mode:
+<span class="ansi-green-fg">   1903</span>         mode += <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">b</span><span class="ansi-yellow-fg">&#34;</span>
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1904</span> <span style="color: rgb(0,135,0)">self</span>.handles = <span class="ansi-yellow-bg">get_handle</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   1905</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">f</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1906</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1907</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">options</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">get</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">encoding</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1908</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">compression</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">options</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">get</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">compression</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1909</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">memory_map</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">options</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">get</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">memory_map</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">False</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1910</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">is_text</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">is_text</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1911</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">errors</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">options</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">get</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">encoding_errors</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">strict</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1912</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">storage_options</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">options</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">get</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">storage_options</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1913</span> <span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1914</span> <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> <span style="color: rgb(0,135,0)">self</span>.handles <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
+<span class="ansi-green-fg">   1915</span> f = <span style="color: rgb(0,135,0)">self</span>.handles.handle
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/pandas/io/common.py:926</span>, in <span class="ansi-cyan-fg">get_handle</span><span class="ansi-blue-fg">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="ansi-green-fg">    921</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> <span style="color: rgb(0,135,0)">isinstance</span>(handle, <span style="color: rgb(0,135,0)">str</span>):
+<span class="ansi-green-fg">    922</span>     <span style="color: rgb(95,135,135)"># Check whether the filename is to be opened in binary mode.</span>
+<span class="ansi-green-fg">    923</span>     <span style="color: rgb(95,135,135)"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="ansi-green-fg">    924</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> ioargs.encoding <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">b</span><span class="ansi-yellow-fg">&#34;</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> ioargs.mode:
+<span class="ansi-green-fg">    925</span>         <span style="color: rgb(95,135,135)"># Encoding</span>
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">926</span>         handle = <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">open</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">    927</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">handle</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    928</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">ioargs</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    929</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">ioargs</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    930</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">errors</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">errors</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    931</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">newline</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    932</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    933</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">    934</span>         <span style="color: rgb(95,135,135)"># Binary mode</span>
+<span class="ansi-green-fg">    935</span>         handle = <span style="color: rgb(0,135,0)">open</span>(handle, ioargs.mode)
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;temp/ex10a/prt/project-prt.trk.csv&#39;
+</pre></div></div>
 </div>
 </section>
 <section id="Plot-the-heads-and-pathlines">
@@ -1386,11 +1402,28 @@ ERROR REPORT:
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[33]</span><span class="ansi-green-fg">, line 8</span>
+<span class="ansi-green-fg">      6</span> mm.plot_bc(<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">WEL</span><span class="ansi-yellow-fg">&#39;</span>, plotAll=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+<span class="ansi-green-fg">      7</span> mm.plot_ibound()
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">8</span> mm.plot_pathline(<span class="ansi-yellow-bg">particle_data</span>, layer=<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">all</span><span class="ansi-yellow-fg">&#39;</span>, color=<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">blue</span><span class="ansi-yellow-fg">&#39;</span>, lw=<span class="ansi-green-fg">1</span>)
+<span class="ansi-green-fg">      9</span> mm.plot_grid(lw=<span class="ansi-green-fg">0.2</span>, color=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">0.5</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">     11</span> ax = plt.gca()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;particle_data&#39; is not defined
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_62_0.png" src="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_62_0.png" />
+<img alt="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_62_1.png" src="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_62_1.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1424,11 +1457,28 @@ ERROR REPORT:
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[34]</span><span class="ansi-green-fg">, line 10</span>
+<span class="ansi-green-fg">      7</span> mm.plot_ibound()
+<span class="ansi-green-fg">      8</span> mm.plot_grid(lw=<span class="ansi-green-fg">0.2</span>, color=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">0.5</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">10</span> df = <span class="ansi-yellow-bg">particle_data</span>
+<span class="ansi-green-fg">     11</span> vmin, vmax = df[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">t</span><span class="ansi-yellow-fg">&#39;</span>].min(), df[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">t</span><span class="ansi-yellow-fg">&#39;</span>].max()
+<span class="ansi-green-fg">     13</span> times = <span style="color: rgb(0,135,0)">list</span>(<span style="color: rgb(0,135,0)">range</span>(<span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">74001</span>, <span class="ansi-green-fg">1000</span>))
+
+<span class="ansi-red-fg">NameError</span>: name &#39;particle_data&#39; is not defined
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_63_0.png" src="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_63_0.png" />
+<img alt="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_63_1.png" src="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_63_1.png" />
 </div>
 </div>
 </section>
@@ -1466,7 +1516,7 @@ ERROR REPORT:
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
@@ -1475,6 +1525,21 @@ ERROR REPORT:
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;cell2d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;icell&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">ncells_per_layer</span>
 <br/></pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[38]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> df[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">t_years</span><span class="ansi-yellow-fg">&#39;</span>] = <span class="ansi-yellow-bg">df</span>[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">t</span><span class="ansi-yellow-fg">&#39;</span>] / <span class="ansi-green-fg">325.25</span>
+<span class="ansi-green-fg">      2</span> df[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">k</span><span class="ansi-yellow-fg">&#39;</span>] = df[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">icell</span><span class="ansi-yellow-fg">&#39;</span>] // ncells_per_layer
+<span class="ansi-green-fg">      3</span> df[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">cell2d</span><span class="ansi-yellow-fg">&#39;</span>] = df[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">icell</span><span class="ansi-yellow-fg">&#39;</span>] % ncells_per_layer
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
@@ -1491,16 +1556,21 @@ ERROR REPORT:
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area stderr docutils container">
+<div class="output_area docutils container">
 <div class="highlight"><pre>
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/discretization/grid.py:973: Pandas4Warning: The copy keyword is deprecated and will be removed in a future version. Copy-on-Write is active in pandas since 3.0 which utilizes a lazy copy mechanism that defers copies until necessary. Use .copy() to make an eager copy if necessary.
-  x, y = x.astype(float, copy=True), y.astype(float, copy=True)
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/discretization/grid.py:973: Pandas4Warning: The copy keyword is deprecated and will be removed in a future version. Copy-on-Write is active in pandas since 3.0 which utilizes a lazy copy mechanism that defers copies until necessary. Use .copy() to make an eager copy if necessary.
-  x, y = x.astype(float, copy=True), y.astype(float, copy=True)
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[39]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> x_crs, y_crs = gwf.modelgrid.get_coords(<span class="ansi-yellow-bg">df</span>[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">x</span><span class="ansi-yellow-fg">&#39;</span>], df[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">y</span><span class="ansi-yellow-fg">&#39;</span>])
+<span class="ansi-green-fg">      3</span> gdf = gpd.GeoDataFrame(df,
+<span class="ansi-green-fg">      4</span>                        geometry=gpd.points_from_xy(x_crs, y_crs),
+<span class="ansi-green-fg">      5</span>                        crs=gwf.modelgrid.crs)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
 </pre></div></div>
 </div>
 <p>Write particles terminating in Well and SFR cells to separate layers</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
@@ -1514,8 +1584,26 @@ ERROR REPORT:
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[40]</span><span class="ansi-green-fg">, line 3</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> package, izone <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> izones.items():
+<span class="ansi-green-fg">      2</span>     layer_name = <span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">Particles going to </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>package.upper()<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> cells</span><span class="ansi-yellow-fg">&#34;</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span>     izone_df = <span class="ansi-yellow-bg">gdf</span>.loc[gdf[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">izone</span><span class="ansi-yellow-fg">&#39;</span>] == izone]
+<span class="ansi-green-fg">      4</span>     izone_df.to_file(output_geopackage, index=<span class="ansi-bold" style="color: rgb(0,135,0)">False</span>, layer=layer_name)
+<span class="ansi-green-fg">      6</span> gdf.loc[gdf[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">izone</span><span class="ansi-yellow-fg">&#39;</span>] == <span class="ansi-green-fg">0</span>].to_file(
+<span class="ansi-green-fg">      7</span>     output_geopackage, index=<span class="ansi-bold" style="color: rgb(0,135,0)">False</span>, layer=<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">All other particles</span><span class="ansi-yellow-fg">&#39;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf&#39; is not defined
+</pre></div></div>
+</div>
 <p>The previous layers that we added to the GeoPackage were points representing particle locations at discrete points in time. We can also combine these in to pathlines (linestrings) to better visualize the paths taken by the particles. In real-world projects, for example where are particle is started in every cell of a large model, we may also have too many points to work with easily; showing a single pathline for each particle may be advantageous.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
@@ -1539,7 +1627,25 @@ ERROR REPORT:
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[41]</span><span class="ansi-green-fg">, line 5</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-intense-fg ansi-bold">shapely</span><span class="ansi-blue-intense-fg ansi-bold">.</span><span class="ansi-blue-intense-fg ansi-bold">geometry</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(0,135,0)">import</span> LineString
+<span class="ansi-green-fg">      3</span> <span style="color: rgb(95,135,135)"># create set of pathlines with start and end information</span>
+<span class="ansi-green-fg">      4</span> <span style="color: rgb(95,135,135)"># first group by particle</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">5</span> by_particle = <span class="ansi-yellow-bg">gdf</span>.sort_values(by=[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">irpt</span><span class="ansi-yellow-fg">&#39;</span>, <span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">t</span><span class="ansi-yellow-fg">&#39;</span>]).groupby(<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">irpt</span><span class="ansi-yellow-fg">&#39;</span>)
+<span class="ansi-green-fg">      6</span> lines = by_particle.last()
+<span class="ansi-green-fg">      7</span> lines.crs = gdf.crs  <span style="color: rgb(95,135,135)"># CRS isn&#39;t retained in groupby</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf&#39; is not defined
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
@@ -1551,6 +1657,24 @@ ERROR REPORT:
     <span class="n">output_geopackage</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;All other pathlines&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[42]</span><span class="ansi-green-fg">, line 3</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> package, izone <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> izones.items():
+<span class="ansi-green-fg">      2</span>     layer_name = <span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">Pathlines going to </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>package.upper()<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> cells</span><span class="ansi-yellow-fg">&#34;</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span>     izone_df = <span class="ansi-yellow-bg">lines</span>.loc[lines[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">izone</span><span class="ansi-yellow-fg">&#39;</span>] == izone]
+<span class="ansi-green-fg">      4</span>     izone_df.to_file(output_geopackage, index=<span class="ansi-bold" style="color: rgb(0,135,0)">False</span>, layer=layer_name)
+<span class="ansi-green-fg">      5</span> izone_df.loc[izone_df[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">izone</span><span class="ansi-yellow-fg">&#39;</span>] == <span class="ansi-green-fg">0</span>].to_file(
+<span class="ansi-green-fg">      6</span>     output_geopackage, index=<span class="ansi-bold" style="color: rgb(0,135,0)">False</span>, layer=<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">All other pathlines</span><span class="ansi-yellow-fg">&#39;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;lines&#39; is not defined
+</pre></div></div>
 </div>
 </section>
 <section id="Plot-pathlines-going-to-SFR-and-WEL-cells">
@@ -1581,30 +1705,31 @@ ERROR REPORT:
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-/tmp/ipykernel_8517/3686669298.py:10: UserWarning: The GeoDataFrame you are attempting to plot is empty. Nothing has been displayed.
-  izone_df.plot(ax=ax, ec=line_colors[package],
-/tmp/ipykernel_8517/3686669298.py:12: UserWarning: The GeoDataFrame you are attempting to plot is empty. Nothing has been displayed.
-  lines.loc[lines[&#39;izone&#39;] == 0].plot(
-/tmp/ipykernel_8517/3686669298.py:16: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
-  pmv.ax.legend()
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
-</pre></div>
-</div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x7fe1ce1481a0&gt;
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[43]</span><span class="ansi-green-fg">, line 9</span>
+<span class="ansi-green-fg">      4</span> line_colors = {
+<span class="ansi-green-fg">      5</span>     <span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">sfr</span><span class="ansi-yellow-fg">&#39;</span>: <span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">b</span><span class="ansi-yellow-fg">&#39;</span>,
+<span class="ansi-green-fg">      6</span>     <span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">wel</span><span class="ansi-yellow-fg">&#39;</span>: <span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">r</span><span class="ansi-yellow-fg">&#39;</span>
+<span class="ansi-green-fg">      7</span> }
+<span class="ansi-green-fg">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> package, izone <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> izones.items():
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">9</span>     izone_df = <span class="ansi-yellow-bg">lines</span>.loc[lines[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">izone</span><span class="ansi-yellow-fg">&#39;</span>] == izone]
+<span class="ansi-green-fg">     10</span>     izone_df.plot(ax=ax, ec=line_colors[package],
+<span class="ansi-green-fg">     11</span>                   label=<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">Pathlines going to </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>package.upper()<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> cells</span><span class="ansi-yellow-fg">&#39;</span>)
+<span class="ansi-green-fg">     12</span> lines.loc[lines[<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">izone</span><span class="ansi-yellow-fg">&#39;</span>] == <span class="ansi-green-fg">0</span>].plot(
+<span class="ansi-green-fg">     13</span>     ax=ax, ec=<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">g</span><span class="ansi-yellow-fg">&#39;</span>,
+<span class="ansi-green-fg">     14</span>     label=<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">All other pathlines</span><span class="ansi-yellow-fg">&#39;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;lines&#39; is not defined
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_77_2.png" src="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_77_2.png" />
+<img alt="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_77_1.png" src="../../_images/notebooks_part1_flopy_10a_prt_particle_tracking-demo_77_1.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1616,80 +1741,17 @@ ERROR REPORT:
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[44]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-yellow-bg">lines</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>kper</th>
-      <th>kstp</th>
-      <th>imdl</th>
-      <th>iprp</th>
-      <th>ilay</th>
-      <th>icell</th>
-      <th>izone</th>
-      <th>istatus</th>
-      <th>ireason</th>
-      <th>trelease</th>
-      <th>...</th>
-      <th>x</th>
-      <th>y</th>
-      <th>z</th>
-      <th>name</th>
-      <th>t_years</th>
-      <th>end_k</th>
-      <th>end_cell2d</th>
-      <th>geometry</th>
-      <th>start_k</th>
-      <th>start_cell2d</th>
-    </tr>
-    <tr>
-      <th>irpt</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-<p>0 rows × 21 columns</p>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;lines&#39; is not defined
+</pre></div></div>
 </div>
 </section>
 <section id="References">
