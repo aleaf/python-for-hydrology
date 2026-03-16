@@ -618,7 +618,8 @@
     "except Exception as e:\n",
     "    text = (\n",
     "        f\"{e}\\n\\nerror reading file: {prt_model_ws / trackcsvfile_prt}\\n\"\n",
-    "        f\"prt_sim.sim_path: {prt_sim.sim_path}\"\n",
+    "        f\"prt_sim.sim_path: {prt_sim.sim_path}\\n\"\n",
+    "        f\"cwd: {Path.cwd()}\"\n",
     "    )\n",
     "    raise Exception(text)"
    ]
