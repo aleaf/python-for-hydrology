@@ -328,15 +328,15 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 15:13:09
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 16:54:39
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
     Solving:  Stress period:     1    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 15:13:10
- Elapsed run time:  0.417 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 16:54:40
+ Elapsed run time:  0.407 Seconds
 
 
 WARNING REPORT:
@@ -1001,7 +1001,7 @@ None
     <span class="n">prt_sim</span><span class="p">,</span>
     <span class="n">filename</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prt_name</span><span class="si">}</span><span class="s2">.ems&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">sim</span><span class="o">.</span><span class="n">register_solution_package</span><span class="p">(</span><span class="n">ems</span><span class="p">,</span> <span class="p">[</span><span class="n">prt</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+<span class="n">prt_sim</span><span class="o">.</span><span class="n">register_solution_package</span><span class="p">(</span><span class="n">ems</span><span class="p">,</span> <span class="p">[</span><span class="n">prt</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1072,14 +1072,14 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 15:13:11
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 16:54:41
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
     Solving:  Stress period:     1    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 15:13:11
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/03/16 16:54:41
  Elapsed run time:  0.105 Seconds
 
  Normal termination of simulation.
@@ -1118,155 +1118,19 @@ and distribution information.
 </div>
 </div>
 <p>Load the tracking CSV file</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">particle_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">prt_model_ws</span> <span class="o">/</span> <span class="n">trackcsvfile_prt</span><span class="p">)</span>
-<span class="n">particle_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">particle_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">prt_model_ws</span> <span class="o">/</span> <span class="n">trackcsvfile_prt</span><span class="p">)</span>
+    <span class="n">particle_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;error reading file: </span><span class="si">{</span><span class="n">prt_model_ws</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">trackcsvfile_prt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;prt_sim.sim_path: </span><span class="si">{</span><span class="n">prt_sim</span><span class="o">.</span><span class="n">sim_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>kper</th>
-      <th>kstp</th>
-      <th>imdl</th>
-      <th>iprp</th>
-      <th>irpt</th>
-      <th>ilay</th>
-      <th>icell</th>
-      <th>izone</th>
-      <th>istatus</th>
-      <th>ireason</th>
-      <th>trelease</th>
-      <th>t</th>
-      <th>x</th>
-      <th>y</th>
-      <th>z</th>
-      <th>name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1353</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>375.000000</td>
-      <td>7125.0</td>
-      <td>29.843871</td>
-      <td>PRT_1352</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1353</td>
-      <td>0</td>
-      <td>1</td>
-      <td>6</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>375.000000</td>
-      <td>7125.0</td>
-      <td>29.650728</td>
-      <td>PRT_1352</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1353</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0.0</td>
-      <td>5600.493437</td>
-      <td>378.953010</td>
-      <td>7250.0</td>
-      <td>29.650728</td>
-      <td>PRT_1352</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1198</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0.0</td>
-      <td>11433.142331</td>
-      <td>402.113867</td>
-      <td>7500.0</td>
-      <td>29.417818</td>
-      <td>PRT_1352</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1043</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0.0</td>
-      <td>15357.870522</td>
-      <td>425.233970</td>
-      <td>7750.0</td>
-      <td>29.079618</td>
-      <td>PRT_1352</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
 </div>
 </section>
 <section id="Plot-the-heads-and-pathlines">
@@ -1374,9 +1238,9 @@ and distribution information.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;t_years&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">325.25</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;k&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;icell&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">//</span> <span class="n">ncells_per_layer</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;cell2d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;icell&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">%</span> <span class="n">ncells_per_layer</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;t_years&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mf">325.25</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;k&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;icell&#39;</span><span class="p">]</span> <span class="o">//</span> <span class="n">ncells_per_layer</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;cell2d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;icell&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">ncells_per_layer</span>
 <br/></pre></div>
 </div>
 </div>
@@ -1483,7 +1347,7 @@ and distribution information.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x7f7ffb4df0d0&gt;
+&lt;matplotlib.legend.Legend at 0x7fc0bb7a08d0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">

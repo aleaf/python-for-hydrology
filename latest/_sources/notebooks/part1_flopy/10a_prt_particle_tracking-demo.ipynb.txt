@@ -541,7 +541,7 @@
     "    prt_sim,\n",
     "    filename=f\"{prt_name}.ems\",\n",
     ")\n",
-    "sim.register_solution_package(ems, [prt.name])"
+    "prt_sim.register_solution_package(ems, [prt.name])"
    ]
   },
   {
@@ -612,8 +612,13 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "particle_data = pd.read_csv(prt_model_ws / trackcsvfile_prt)\n",
-    "particle_data.head()"
+    "try:\n",
+    "    particle_data = pd.read_csv(prt_model_ws / trackcsvfile_prt)\n",
+    "    particle_data.head()\n",
+    "except Exception as e:\n",
+    "    print(e)\n",
+    "    print(f\"error reading file: {prt_model_ws / trackcsvfile_prt}\")\n",
+    "    print(f\"prt_sim.sim_path: {prt_sim.sim_path}\")"
    ]
   },
   {
@@ -728,9 +733,9 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "df['t_years'] = df['t'] * 325.25\n",
-    "df['k'] = df['icell'].values[-1] // ncells_per_layer\n",
-    "df['cell2d'] = df['icell'].values[-1] % ncells_per_layer\n"
+    "df['t_years'] = df['t'] / 325.25\n",
+    "df['k'] = df['icell'] // ncells_per_layer\n",
+    "df['cell2d'] = df['icell'] % ncells_per_layer\n"
    ]
   },
   {
