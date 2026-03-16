@@ -735,7 +735,17 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "prt_sim.run_simulation()"
+    "results = prt_sim.run_simulation(report=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(os.getcwd())\n",
+    "print(f\"\\n{results[0]}\\n\\n{'\\n'.join(results[1])}\")\n"
    ]
   },
   {
