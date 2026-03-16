@@ -667,7 +667,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">sgrid</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">sgrid</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">basindf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">contains_centroid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">rowcol</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;cellids&quot;</span><span class="p">]</span>
 </pre></div>
@@ -681,7 +681,7 @@
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[16]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(sgrid, method=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">vertex</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(sgrid)
 <span class="ansi-green-fg">      2</span> result = ix.intersect(basindf.geometry.values[<span class="ansi-green-fg">0</span>], contains_centroid=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
 <span class="ansi-green-fg">      3</span> rowcol = result[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">cellids</span><span class="ansi-yellow-fg">&#34;</span>]
 
@@ -913,7 +913,7 @@
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rowcols</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">sgrid</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">)</span>
+<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">sgrid</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">geom</span> <span class="ow">in</span> <span class="n">nhddf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
     <span class="n">rcs</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">geom</span><span class="p">)[</span><span class="s2">&quot;cellids&quot;</span><span class="p">]</span>
     <span class="n">rowcols</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">rcs</span><span class="p">))</span>
@@ -929,7 +929,7 @@
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[22]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> rowcols = []
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(sgrid, method=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">vertex</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(sgrid)
 <span class="ansi-green-fg">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> geom <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> nhddf.geometry.values:
 <span class="ansi-green-fg">      4</span>     rcs = ix.intersects(geom)[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">cellids</span><span class="ansi-yellow-fg">&#34;</span>]
 
@@ -1094,7 +1094,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">rfgrid</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">rfgrid</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">basindf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">contains_centroid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">rowcol</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;cellids&quot;</span><span class="p">]</span>
 
@@ -1115,7 +1115,7 @@
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[27]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(rfgrid, method=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">vertex</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(rfgrid)
 <span class="ansi-green-fg">      2</span> result = ix.intersect(basindf.geometry.values[<span class="ansi-green-fg">0</span>], contains_centroid=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
 <span class="ansi-green-fg">      3</span> rowcol = result[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">cellids</span><span class="ansi-yellow-fg">&#34;</span>]
 
@@ -1326,7 +1326,7 @@
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># live code this/give it as an activity</span>
 <span class="n">idomainp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">sgrid</span><span class="o">.</span><span class="n">idomain</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
 
-<span class="n">gix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">sgrid</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">)</span>
+<span class="n">gix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">sgrid</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">gix</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">lgr_gdf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">cid</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;cellids&quot;</span><span class="p">]</span>
 
@@ -1345,7 +1345,7 @@
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[33]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># live code this/give it as an activity</span>
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> idomainp = np.ones(<span class="ansi-yellow-bg">sgrid</span>.idomain.shape, dtype=<span style="color: rgb(0,135,0)">int</span>)
-<span class="ansi-green-fg">      4</span> gix = GridIntersect(sgrid, method=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">vertex</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">      4</span> gix = GridIntersect(sgrid)
 <span class="ansi-green-fg">      5</span> result = gix.intersect(lgr_gdf.geometry.values[<span class="ansi-green-fg">0</span>])
 
 <span class="ansi-red-fg">NameError</span>: name &#39;sgrid&#39; is not defined
@@ -1474,7 +1474,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">childgrid</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">childgrid</span><span class="p">)</span>
 <span class="n">cstrmcells</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">geom</span> <span class="ow">in</span> <span class="n">nhddf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
     <span class="n">rcs</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">geom</span><span class="p">)[</span><span class="s2">&quot;cellids&quot;</span><span class="p">]</span>
@@ -1495,7 +1495,7 @@
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[38]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(childgrid, method=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">vertex</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(childgrid)
 <span class="ansi-green-fg">      2</span> cstrmcells = []
 <span class="ansi-green-fg">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> geom <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> nhddf.geometry.values:
 
@@ -1676,7 +1676,7 @@
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the idomain array</span>
 <span class="n">idomain</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">quadgrid</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">quadgrid</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">)</span>
+<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">quadgrid</span><span class="p">)</span>
 <span class="n">nodes</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">basindf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">contains_centroid</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s2">&quot;cellids&quot;</span><span class="p">]</span>
 
 <span class="n">idomain</span><span class="p">[:,</span> <span class="nb">list</span><span class="p">(</span><span class="n">nodes</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -1694,7 +1694,7 @@
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[45]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># create the idomain array</span>
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> idomain = np.zeros(<span class="ansi-yellow-bg">quadgrid</span>.shape, dtype=<span style="color: rgb(0,135,0)">int</span>)
-<span class="ansi-green-fg">      3</span> ix = GridIntersect(quadgrid, method=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">vertex</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">      3</span> ix = GridIntersect(quadgrid)
 <span class="ansi-green-fg">      4</span> nodes = ix.intersect(basindf.geometry.values[<span class="ansi-green-fg">0</span>], contains_centroid=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">cellids</span><span class="ansi-yellow-fg">&#34;</span>]
 
 <span class="ansi-red-fg">NameError</span>: name &#39;quadgrid&#39; is not defined
@@ -1706,7 +1706,7 @@
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an array of stream cells</span>
 <span class="n">qstr</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">quadgrid</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">)</span>
+<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">quadgrid</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">geom</span> <span class="ow">in</span> <span class="n">nhddf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">geom</span><span class="p">)[</span><span class="s2">&quot;cellids&quot;</span><span class="p">]</span>
     <span class="n">qstr</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nodes</span><span class="p">))</span>
@@ -1723,7 +1723,7 @@
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[46]</span><span class="ansi-green-fg">, line 3</span>
 <span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># create an array of stream cells</span>
 <span class="ansi-green-fg">      2</span> qstr = []
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(quadgrid, method=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">vertex</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(quadgrid)
 <span class="ansi-green-fg">      4</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> geom <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> nhddf.geometry.values:
 <span class="ansi-green-fg">      5</span>     nodes = ix.intersects(geom)[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">cellids</span><span class="ansi-yellow-fg">&#34;</span>]
 
@@ -2049,7 +2049,7 @@
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tristr</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">trigrid</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">)</span>
+<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">trigrid</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">geom</span> <span class="ow">in</span> <span class="n">nhddf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">geom</span><span class="p">)[</span><span class="s2">&quot;cellids&quot;</span><span class="p">]</span>
     <span class="n">tristr</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nodes</span><span class="p">))</span>
@@ -2068,7 +2068,7 @@
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[59]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> tristr = []
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(trigrid, method=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">vertex</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(trigrid)
 <span class="ansi-green-fg">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> geom <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> nhddf.geometry.values:
 <span class="ansi-green-fg">      4</span>     nodes = ix.intersects(geom)[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">cellids</span><span class="ansi-yellow-fg">&#34;</span>]
 
@@ -2229,7 +2229,7 @@
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vorst</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">vorgrid</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;vertex&quot;</span><span class="p">)</span>
+<span class="n">ix</span> <span class="o">=</span> <span class="n">GridIntersect</span><span class="p">(</span><span class="n">vorgrid</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">geom</span> <span class="ow">in</span> <span class="n">nhddf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="n">ix</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">geom</span><span class="p">)[</span><span class="s2">&quot;cellids&quot;</span><span class="p">]</span>
     <span class="n">vorst</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nodes</span><span class="p">))</span>
@@ -2248,7 +2248,7 @@
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[65]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> vorst = []
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(vorgrid, method=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">vertex</span><span class="ansi-yellow-fg">&#34;</span>)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> ix = <span class="ansi-yellow-bg">GridIntersect</span>(vorgrid)
 <span class="ansi-green-fg">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> geom <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> nhddf.geometry.values:
 <span class="ansi-green-fg">      4</span>     nodes = ix.intersects(geom)[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">cellids</span><span class="ansi-yellow-fg">&#34;</span>]
 
