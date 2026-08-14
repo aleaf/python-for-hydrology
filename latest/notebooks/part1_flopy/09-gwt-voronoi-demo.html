@@ -27,7 +27,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10a: Particle tracking with MODFLOW 6 PRT" href="10a_prt_particle_tracking-demo.html" />
+    <link rel="next" title="10a: Particle tracking with MODFLOW 6 PRT" href="10_prt_particle_tracking-demo.html" />
     <link rel="prev" title="08: Modflow-setup demonstration" href="08_Modflow-setup-demo.html" /> 
 </head>
 
@@ -72,15 +72,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#Post-process-the-results">Post-process the results</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="10a_prt_particle_tracking-demo.html">10a: Particle tracking with MODFLOW 6 PRT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10b_modpath_particle_tracking-demo.html">10b: Particle tracking with MODPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_prt_particle_tracking-demo.html">10a: Particle tracking with MODFLOW 6 PRT</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Bonus Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../part0_bonus_examples.html">     General Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../part0_bonus_examples.html">Flopy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part1_bonus_examples.html">Flopy</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul>
@@ -231,7 +230,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7f25d644b4d0&gt;]
+[&lt;matplotlib.lines.Line2D at 0x25961ec97f0&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -419,12 +418,12 @@ INFORMATION: maxbound in (&#39;gwt6&#39;, &#39;cnc&#39;, &#39;dimensions&#39;) c
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-FloPy is using the following executable to run the model: ../../../../../../../../../.local/bin/mf6
+FloPy is using the following executable to run the model: C:\Users\runneradmin\.local\bin\mf6.exe
                                    MODFLOW 6
                 U.S. GEOLOGICAL SURVEY MODULAR HYDROLOGIC MODEL
                             VERSION 6.7.0 02/05/2026
 
-   MODFLOW 6 compiled Feb 05 2026 22:38:38 with Intel(R) Fortran Intel(R) 64
+   MODFLOW 6 compiled Feb 05 2026 22:36:44 with Intel(R) Fortran Intel(R) 64
    Compiler Classic for applications running on Intel(R) 64, Version 2021.6.0
                              Build 20220226_000000
 
@@ -444,7 +443,7 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/08/07 21:52:38
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/08/14 15:54:37
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
@@ -550,8 +549,8 @@ and distribution information.
     Solving:  Stress period:     1    Time step:    99
     Solving:  Stress period:     1    Time step:   100
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/08/07 21:52:48
- Elapsed run time:  9.802 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/08/14 15:54:49
+ Elapsed run time: 12.703 Seconds
 
  Normal termination of simulation.
 </pre></div></div>
@@ -586,16 +585,16 @@ and distribution information.
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/postprocessing.py:617: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\postprocessing.py:617: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   head.shape = modelgrid.shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/postprocessing.py:743: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\postprocessing.py:743: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   qx.shape = modelgrid.shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/postprocessing.py:744: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\postprocessing.py:744: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   qy.shape = modelgrid.shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/postprocessing.py:745: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\postprocessing.py:745: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   qz.shape = modelgrid.shape
 </pre></div></div>
@@ -857,42 +856,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_img2da84b30d48e478190b39421184d05f2">
+  <img id="_anim_imgc4d33ac22e3443ffa1fe26e2b721da83">
   <div class="anim-controls">
-    <input id="_anim_slider2da84b30d48e478190b39421184d05f2" type="range" class="anim-slider"
+    <input id="_anim_sliderc4d33ac22e3443ffa1fe26e2b721da83" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anim2da84b30d48e478190b39421184d05f2.set_frame(parseInt(this.value));">
+           oninput="animc4d33ac22e3443ffa1fe26e2b721da83.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim2da84b30d48e478190b39421184d05f2.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="animc4d33ac22e3443ffa1fe26e2b721da83.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anim2da84b30d48e478190b39421184d05f2.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="animc4d33ac22e3443ffa1fe26e2b721da83.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anim2da84b30d48e478190b39421184d05f2.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="animc4d33ac22e3443ffa1fe26e2b721da83.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anim2da84b30d48e478190b39421184d05f2.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="animc4d33ac22e3443ffa1fe26e2b721da83.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anim2da84b30d48e478190b39421184d05f2.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="animc4d33ac22e3443ffa1fe26e2b721da83.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anim2da84b30d48e478190b39421184d05f2.play_animation()">
+      <button title="Play" aria-label="Play" onclick="animc4d33ac22e3443ffa1fe26e2b721da83.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anim2da84b30d48e478190b39421184d05f2.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="animc4d33ac22e3443ffa1fe26e2b721da83.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anim2da84b30d48e478190b39421184d05f2.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="animc4d33ac22e3443ffa1fe26e2b721da83.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anim2da84b30d48e478190b39421184d05f2.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="animc4d33ac22e3443ffa1fe26e2b721da83.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select2da84b30d48e478190b39421184d05f2"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selectc4d33ac22e3443ffa1fe26e2b721da83"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_2da84b30d48e478190b39421184d05f2"
+      <input type="radio" name="state" value="once" id="_anim_radio1_c4d33ac22e3443ffa1fe26e2b721da83"
              >
-      <label for="_anim_radio1_2da84b30d48e478190b39421184d05f2">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_2da84b30d48e478190b39421184d05f2"
+      <label for="_anim_radio1_c4d33ac22e3443ffa1fe26e2b721da83">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_c4d33ac22e3443ffa1fe26e2b721da83"
              checked>
-      <label for="_anim_radio2_2da84b30d48e478190b39421184d05f2">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_2da84b30d48e478190b39421184d05f2"
+      <label for="_anim_radio2_c4d33ac22e3443ffa1fe26e2b721da83">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_c4d33ac22e3443ffa1fe26e2b721da83"
              >
-      <label for="_anim_radio3_2da84b30d48e478190b39421184d05f2">Reflect</label>
+      <label for="_anim_radio3_c4d33ac22e3443ffa1fe26e2b721da83">Reflect</label>
     </form>
   </div>
 </div>
@@ -902,9 +901,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_img2da84b30d48e478190b39421184d05f2";
-    var slider_id = "_anim_slider2da84b30d48e478190b39421184d05f2";
-    var loop_select_id = "_anim_loop_select2da84b30d48e478190b39421184d05f2";
+    var img_id = "_anim_imgc4d33ac22e3443ffa1fe26e2b721da83";
+    var slider_id = "_anim_sliderc4d33ac22e3443ffa1fe26e2b721da83";
+    var loop_select_id = "_anim_loop_selectc4d33ac22e3443ffa1fe26e2b721da83";
     var frames = new Array(100);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAJYCAYAAABM7LCIAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -220873,7 +220872,7 @@ GRkZGV0hO5CMjIyMjOgG/x/B0Nwe58gpJQAAAABJRU5ErkJggg==\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anim2da84b30d48e478190b39421184d05f2 = new Animation(frames, img_id, slider_id, 200.0,
+        animc4d33ac22e3443ffa1fe26e2b721da83 = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -220900,7 +220899,7 @@ GRkZGV0hO5CMjIyMjOgG/x/B0Nwe58gpJQAAAABJRU5ErkJggg==\
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.colorbar.Colorbar at 0x7f25cc18b8c0&gt;
+&lt;matplotlib.colorbar.Colorbar at 0x259664c1be0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -220926,14 +220925,14 @@ GRkZGV0hO5CMjIyMjOgG/x/B0Nwe58gpJQAAAABJRU5ErkJggg==\
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="08_Modflow-setup-demo.html" class="btn btn-neutral float-left" title="08: Modflow-setup demonstration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="10a_prt_particle_tracking-demo.html" class="btn btn-neutral float-right" title="10a: Particle tracking with MODFLOW 6 PRT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="10_prt_particle_tracking-demo.html" class="btn btn-neutral float-right" title="10a: Particle tracking with MODFLOW 6 PRT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2026, USGS Python for Hydrology instructors.
-      <span class="lastupdated">Last updated on Aug 07, 2026.
+      <span class="lastupdated">Last updated on Aug 14, 2026.
       </span></p>
   </div>
 

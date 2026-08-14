@@ -91,15 +91,14 @@
 <li class="toctree-l2"><a class="reference internal" href="07-stream_capture_voronoi.html">07: Evaluating stream capture with a Voronoi grid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../08_Modflow-setup-demo.html">08: Modflow-setup demonstration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09-gwt-voronoi-demo.html">09: Demonstration of MODFLOW 6 Groundwater Transport with a Voronoi Grid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../10a_prt_particle_tracking-demo.html">10a: Particle tracking with MODFLOW 6 PRT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../10b_modpath_particle_tracking-demo.html">10b: Particle tracking with MODPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10_prt_particle_tracking-demo.html">10a: Particle tracking with MODFLOW 6 PRT</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Bonus Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../part0_bonus_examples.html">     General Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../part0_bonus_examples.html">Flopy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../part1_bonus_examples.html">Flopy</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul>
@@ -665,14 +664,14 @@ xll:7695794.20952; yll:4050416.79628; rotation:-15; units:undefined; lenuni:0
 <span class="ansi-green-fg">      2</span> g.add_refinement_features(refined.geometry.to_list(), <span class="ansi-yellow-fg">&#34;polygon&#34;</span>, <span class="ansi-green-fg">1</span>, [<span class="ansi-green-fg">0</span>,])
 <span class="ansi-green-fg">      3</span> g.build(verbose=<span class="ansi-bold" style="color: rgb(0,135,0)">False</span>)
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/gridgen.py:244</span>, in <span class="ansi-cyan-fg">Gridgen.__init__</span><span class="ansi-blue-fg">(self, modelgrid, model_ws, exe_name, surface_interpolation, vertical_pass_through, **kwargs)</span>
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\gridgen.py:244</span>, in <span class="ansi-cyan-fg">Gridgen.__init__</span><span class="ansi-blue-fg">(self, modelgrid, model_ws, exe_name, surface_interpolation, vertical_pass_through, **kwargs)</span>
 <span class="ansi-green-fg">    242</span> <span style="color: rgb(0,135,0)">self</span>._vertdict = {}
 <span class="ansi-green-fg">    243</span> <span style="color: rgb(0,135,0)">self</span>.model_ws = Path(model_ws).expanduser().absolute()
 <span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">244</span> <span style="color: rgb(0,135,0)">self</span>.exe_name = <span class="ansi-black-fg ansi-yellow-bg">resolve_exe</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">exe_name</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
 <span class="ansi-green-fg">    246</span> <span style="color: rgb(95,135,135)"># Set default surface interpolation for all surfaces (nlay + 1)</span>
 <span class="ansi-green-fg">    247</span> surface_interpolation = surface_interpolation.upper()
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/mbase.py:111</span>, in <span class="ansi-cyan-fg">resolve_exe</span><span class="ansi-blue-fg">(exe_name, forgive)</span>
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\mbase.py:111</span>, in <span class="ansi-cyan-fg">resolve_exe</span><span class="ansi-blue-fg">(exe_name, forgive)</span>
 <span class="ansi-green-fg">    105</span>     warn(
 <span class="ansi-green-fg">    106</span>         <span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">The program </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>exe_name<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> does not exist or is not executable.</span><span class="ansi-yellow-fg">&#34;</span>,
 <span class="ansi-green-fg">    107</span>         category=<span class="ansi-bold" style="color: rgb(215,95,95)">UserWarning</span>,
@@ -1022,7 +1021,7 @@ identifier
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-xll:214268.62207605218; yll:4366643.474127463; rotation:0.0; crs:EPSG:26911; units:undefined; lenuni:0
+xll:214268.62207605224; yll:4366643.474127463; rotation:0.0; crs:EPSG:26911; units:undefined; lenuni:0
 False
 </pre></div></div>
 </div>
@@ -1063,7 +1062,7 @@ False
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/gridintersect.py:123: DeprecationWarning: Note `method=&#34;structured&#34;` is deprecated. Pass `method=&#34;vertex&#34;` to silence this warning. This will be the new default in a future release and this keyword argument will be removed.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\gridintersect.py:123: DeprecationWarning: Note `method=&#34;structured&#34;` is deprecated. Pass `method=&#34;vertex&#34;` to silence this warning. This will be the new default in a future release and this keyword argument will be removed.
   warnings.warn(
 </pre></div></div>
 </div>
@@ -1099,7 +1098,7 @@ array([(1, 52), (1, 53), (1, 54), ..., (73, 64), (73, 65), (73, 66)],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.QuadMesh at 0x7f00d6b387d0&gt;
+&lt;matplotlib.collections.QuadMesh at 0x26412c83390&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1143,7 +1142,7 @@ array([(1, 52), (1, 53), (1, 54), ..., (73, 64), (73, 65), (73, 66)],
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
 </pre></div></div>
@@ -1403,40 +1402,40 @@ model_name = sagehen
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
 </pre></div></div>
@@ -1622,7 +1621,7 @@ As an alternative, you can create a new view using np.reshape (with copy=False i
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/tmp/ipykernel_13678/2878387340.py:2: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\AppData\Local\Temp\ipykernel_3808\2878387340.py:2: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   arr.shape = (12, modelgrid.nrow, modelgrid.ncol)
 </pre></div></div>
@@ -1816,40 +1815,40 @@ As an alternative, you can create a new view using np.reshape (with copy=False i
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
 </pre></div></div>
@@ -2054,7 +2053,7 @@ As an alternative, you can create a new view using np.reshape (with copy=False i
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\rasters.py:588: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
 As an alternative, you can create a new view using np.reshape (with copy=False if needed).
   data.shape = data_shape
 </pre></div></div>
@@ -2251,7 +2250,7 @@ As an alternative, you can create a new view using np.reshape (with copy=False i
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/gridintersect.py:123: DeprecationWarning: Note `method=&#34;structured&#34;` is deprecated. Pass `method=&#34;vertex&#34;` to silence this warning. This will be the new default in a future release and this keyword argument will be removed.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\gridintersect.py:123: DeprecationWarning: Note `method=&#34;structured&#34;` is deprecated. Pass `method=&#34;vertex&#34;` to silence this warning. This will be the new default in a future release and this keyword argument will be removed.
   warnings.warn(
 </pre></div></div>
 </div>
@@ -2297,7 +2296,7 @@ As an alternative, you can create a new view using np.reshape (with copy=False i
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/runner/micromamba/envs/pyclass-docs/lib/python3.14/site-packages/flopy/utils/gridintersect.py:123: DeprecationWarning: Note `method=&#34;structured&#34;` is deprecated. Pass `method=&#34;vertex&#34;` to silence this warning. This will be the new default in a future release and this keyword argument will be removed.
+C:\Users\runneradmin\micromamba\envs\pyclass-docs\Lib\site-packages\flopy\utils\gridintersect.py:123: DeprecationWarning: Note `method=&#34;structured&#34;` is deprecated. Pass `method=&#34;vertex&#34;` to silence this warning. This will be the new default in a future release and this keyword argument will be removed.
   warnings.warn(
 </pre></div></div>
 </div>
@@ -2740,12 +2739,12 @@ writing simulation...
     writing package uzf_0...
 INFORMATION: nuzfcells in (&#39;gwf6&#39;, &#39;uzf&#39;, &#39;dimensions&#39;) changed to 3587 based on size of packagedata
     writing package riv_0...
-FloPy is using the following executable to run the model: ../../../../../../../../../.local/bin/mf6
+FloPy is using the following executable to run the model: C:\Users\runneradmin\.local\bin\mf6.exe
                                    MODFLOW 6
                 U.S. GEOLOGICAL SURVEY MODULAR HYDROLOGIC MODEL
                             VERSION 6.7.0 02/05/2026
 
-   MODFLOW 6 compiled Feb 05 2026 22:38:38 with Intel(R) Fortran Intel(R) 64
+   MODFLOW 6 compiled Feb 05 2026 22:36:44 with Intel(R) Fortran Intel(R) 64
    Compiler Classic for applications running on Intel(R) 64, Version 2021.6.0
                              Build 20220226_000000
 
@@ -2765,7 +2764,7 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/08/07 21:54:19
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2026/08/14 15:56:48
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
@@ -3136,8 +3135,8 @@ and distribution information.
     Solving:  Stress period:    12    Time step:    30
     Solving:  Stress period:    12    Time step:    31
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/08/07 21:54:57
- Elapsed run time: 37.864 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2026/08/14 15:57:34
+ Elapsed run time: 46.209 Seconds
 
 
 WARNING REPORT:
@@ -3217,7 +3216,7 @@ WARNING REPORT:
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2026, USGS Python for Hydrology instructors.
-      <span class="lastupdated">Last updated on Aug 07, 2026.
+      <span class="lastupdated">Last updated on Aug 14, 2026.
       </span></p>
   </div>
 
